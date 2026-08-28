@@ -12,6 +12,7 @@ import {
 } from '@shared/engineAvailability';
 import type { ToolStatus } from '@shared/toolCatalog';
 import { useResolvedGodName } from '@/hooks/useResolvedGodName';
+import { LANGUAGES, setLanguage } from '@/i18n';
 
 export interface OnboardingWizardProps {
   onComplete: (config: HarnessConfig) => void;
@@ -88,7 +89,7 @@ const PROVIDER_BLURB_KEYS: Partial<Record<AgentProvider, string>> = {
 };
 
 export function OnboardingWizard({ onComplete }: OnboardingWizardProps) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   // Onboarding runs before god exists in the store, so read the persisted name.
   const godName = useResolvedGodName();
   const [step, setStep] = useState<Step>('persona');
@@ -267,6 +268,32 @@ export function OnboardingWizard({ onComplete }: OnboardingWizardProps) {
 
             {step === 'persona' && (
               <>
+                {/* Language, on the very first screen a new install ever shows.
+                    The app deliberately never reads the OS locale (see the note
+                    in i18n/index.ts), so a fresh install opens in English for
+                    everybody — and the picker that fixes that lived in Settings,
+                    which onboarding covers and blocks until it is finished. A
+                    translated app whose first screen could not be translated was
+                    the one screen a non-English speaker actually had to read.
+                    The options are self-labelled ("Italiano", "العربية"), so the
+                    row stays readable in a language the reader does not have yet.
+                    setLanguage() persists the pick, so this is also the language
+                    the app opens in next launch — same storage as Settings. */}
+                <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: 6 }}>
+                  <Icon name="web" />
+                  <span style={{ fontSize: 12, color: 'var(--cth-ink-500)' }}>{t('onboarding.language')}</span>
+                  <select
+                    value={i18n.language}
+                    onChange={(e) => setLanguage(e.target.value)}
+                    aria-label={t('onboarding.language')}
+                    style={languageSelectStyle}
+                  >
+                    {LANGUAGES.map((l) => (
+                      <option key={l.code} value={l.code}>{l.label}</option>
+                    ))}
+                  </select>
+                </div>
+
                 <div style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
                   <div style={{
                     width: 56, height: 56, flexShrink: 0,
@@ -903,6 +930,20 @@ function prevStep(s: Step): Step {
     : s === 'welcome' ? 'persona'
     : 'persona';
 }
+
+/** The language row sits beside its label, so it must NOT take `inputStyle`'s
+ *  `flex: 1` — that stretches the select across the panel and pushes the label
+ *  off to the far edge, which reads as two unrelated controls. */
+const languageSelectStyle: React.CSSProperties = {
+  padding: '4px 6px 2px',
+  background: 'var(--cth-paper-100)',
+  border: 'none',
+  boxShadow: 'inset 0 0 0 1px var(--cth-ink-100)',
+  fontFamily: 'var(--cth-font-mono)',
+  fontSize: 12,
+  color: 'var(--cth-ink-900)',
+  outline: 'none'
+};
 
 const inputStyle: React.CSSProperties = {
   flex: 1,

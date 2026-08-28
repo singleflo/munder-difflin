@@ -577,6 +577,7 @@
     "skipHire": "salta assunto"
   },
   "onboarding": {
+    "language": "Lingua",
     "titles": {
       "persona": "BENVENUTO IN MUNDER DIFFLIN",
       "welcome": "ECCO IL TUO UFFICIO",

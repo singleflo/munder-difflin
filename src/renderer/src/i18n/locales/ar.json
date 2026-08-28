@@ -577,6 +577,7 @@
     "skipHire": "تخطَّ التعيين"
   },
   "onboarding": {
+    "language": "اللغة",
     "titles": {
       "persona": "أهلًا بك في MUNDER DIFFLIN",
       "welcome": "تعرَّف على مكتبك",

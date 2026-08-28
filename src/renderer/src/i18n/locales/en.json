@@ -577,6 +577,7 @@
     "skipHire": "skip hire"
   },
   "onboarding": {
+    "language": "Language",
     "titles": {
       "persona": "WELCOME TO MUNDER DIFFLIN",
       "welcome": "MEET YOUR OFFICE",

@@ -577,6 +577,7 @@
     "skipHire": "跳过 hire"
   },
   "onboarding": {
+    "language": "语言",
     "titles": {
       "persona": "欢迎来到 MUNDER DIFFLIN",
       "welcome": "认识你的办公室",
