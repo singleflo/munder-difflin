@@ -123,7 +123,21 @@ test('no Italian string is left as its English source', () => {
     // ar did translate it ("/技能"); Italian deliberately does not, so this key
     // stays identical to English forever and has to be allowlisted or the
     // still-English check can never reach zero.
-    'commandBar.skill'
+    'commandBar.skill',
+    // The four below hold no translatable prose at all — only placeholders,
+    // symbols and sub-4-letter abbreviations. The 4-letter guard above does not
+    // skip them because it sees the letters INSIDE {{from}} / {{value}}, which
+    // are variable names the user never reads. Same rationale as
+    // mcpDefaults.toggleNote and webhooksSection.summary already on this list.
+    'commandCenter.logMessage',              // "{{from}} → {{to}}: {{subject}}"
+    'commandCenter.fleetTokens',             // "Σ {{value}} tok"
+    'commandCenter.fleetRate',               // "{{value}} tok/min"
+    'toolWaterfall.barOk',                   // "{{tool}} · {{ms}}ms · ok"
+    // "budget" is the Italian word for budget — a fully naturalised loanword the
+    // glossary itself uses ("budget dell'ufficio", "Budget token complessivo").
+    // Inventing a different word here just to look translated would contradict
+    // the glossary everywhere else.
+    'commandCenter.budget'
   ]);
   const e = pathsOf(en), i = pathsOf(it);
   const untranslated = [];
