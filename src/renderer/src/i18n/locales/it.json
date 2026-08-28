@@ -94,7 +94,7 @@
   },
   "askMe": {
     "emptyTitle": "Al momento non serve nulla. 🌿",
-    "emptySub": "Quando la squadra blocca un task in attesa di una tua risposta — una domanda o una cosa da fare che solo tu puoi fare — compare qui (e sulla bacheca CHIEDIMI nell'ufficio).",
+    "emptySub": "Quando la squadra blocca un task in attesa di una tua risposta — una domanda a cui rispondere o una cosa da fare che spetta solo a te — compare qui (e sulla bacheca CHIEDIMI nell'ufficio).",
     "openDetail": "apri il dettaglio completo del task",
     "dismissTitle": "scarta — togli questo dalla bacheca CHIEDIMI senza rispondere (la cronologia resta)",
     "dismissAria": "scarta questa richiesta",
