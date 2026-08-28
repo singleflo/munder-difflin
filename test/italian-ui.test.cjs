@@ -117,7 +117,13 @@ test('no Italian string is left as its English source', () => {
     'addAgent.projectPlaceholder',           // /path/to/your/project — a filesystem path
     'onboarding.home.placeholder',           // /path/to/HarnessAgents — same
     'mcpDefaults.toggleNote',                // "{{id}}: {{state}}" — pure interpolation
-    'webhooksSection.summary'                // "{{count}} · {{state}}" — same
+    'webhooksSection.summary',               // "{{count}} · {{state}}" — same
+    // "/skill" is the literal slash-command the user types, not prose about a
+    // skill. Translating it would print a command that does not exist. zh-CN and
+    // ar did translate it ("/技能"); Italian deliberately does not, so this key
+    // stays identical to English forever and has to be allowlisted or the
+    // still-English check can never reach zero.
+    'commandBar.skill'
   ]);
   const e = pathsOf(en), i = pathsOf(it);
   const untranslated = [];
