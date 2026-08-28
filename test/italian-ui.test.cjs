@@ -145,7 +145,10 @@ test('no Italian string is left as its English source', () => {
     // keeps both English on purpose — so these two headings, which are the bare
     // word plus a placeholder, come out identical to English by construction.
     'schedulesSection.prompt',               // "PROMPT"
-    'triggerHistory.task'                    // "TASK {{id}}"
+    'triggerHistory.task',                   // "TASK {{id}}"
+    // "diff" belongs to the git vocabulary the glossary keeps in English
+    // alongside commit, branch and worktree, so this badge is already Italian.
+    'idePanel.diff'                          // "DIFF"
   ]);
   const e = pathsOf(en), i = pathsOf(it);
   const untranslated = [];
