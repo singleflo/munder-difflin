@@ -30,7 +30,7 @@
     "blockedNote": "Serve un'approvazione."
   },
   "blockedBanner": {
-    "needsYou": "needs you"
+    "needsYou": "richiede attenzione"
   },
   "costHud": {
     "spendCap": "Spend cap",
@@ -82,31 +82,31 @@
     "steerAria": "Send this agent a note"
   },
   "agentCard": {
-    "boss": "BOSS",
-    "contextTitle": "Context: {{used}} / {{limit}} tokens ({{pct}}%)",
-    "contextGaugeTitle": "Context gauge — fills once the agent reports activity",
-    "doingTasks": "actively working {{count}} task — click to open",
-    "doingTasksPlural": "actively working {{count}} tasks — click to open",
-    "editNote": "Edit private note",
-    "addNote": "Add private note",
-    "editNoteAria": "Edit note for {{name}}",
-    "noteAria": "Note for {{name}}"
+    "boss": "CAPO",
+    "contextTitle": "Contesto: {{used}} / {{limit}} token ({{pct}}%)",
+    "contextGaugeTitle": "Indicatore di contesto — si riempie quando l'agente segnala attività",
+    "doingTasks": "{{count}} task in corso — clic per aprirlo",
+    "doingTasksPlural": "{{count}} task in corso — clic per aprirli",
+    "editNote": "Modifica la nota privata",
+    "addNote": "Aggiungi una nota privata",
+    "editNoteAria": "Modifica la nota di {{name}}",
+    "noteAria": "Nota di {{name}}"
   },
   "askMe": {
-    "emptyTitle": "Nothing needs you right now. 🌿",
-    "emptySub": "When the team blocks a task on your input — a question to answer or a to-do only you can perform — it shows up here (and on the ASK ME board on the floor).",
-    "openDetail": "open the full task detail",
-    "dismissTitle": "dismiss — clear this off the ASK ME board without answering (history kept)",
-    "dismissAria": "dismiss this ask",
-    "answerPlaceholder": "Your answer — or 'done', with the result… (Ctrl+Enter to send)",
-    "sending": "sending…",
-    "respond": "respond & unblock",
-    "viewAnswers": "VIEW {{count}} EARLIER ANSWER",
-    "viewAnswersPlural": "VIEW {{count}} EARLIER ANSWERS",
-    "viewAnswersHistory": "open the task detail with the full Q&A history",
-    "blockingDownstream": "BLOCKING {{count}} DOWNSTREAM TASK",
-    "blockingDownstreamPlural": "BLOCKING {{count}} DOWNSTREAM TASKS",
-    "more": "… +{{count}} more"
+    "emptyTitle": "Al momento non serve nulla. 🌿",
+    "emptySub": "Quando la squadra blocca un task in attesa di una tua risposta — una domanda o una cosa da fare che solo tu puoi fare — compare qui (e sulla bacheca CHIEDIMI nell'ufficio).",
+    "openDetail": "apri il dettaglio completo del task",
+    "dismissTitle": "scarta — togli questo dalla bacheca CHIEDIMI senza rispondere (la cronologia resta)",
+    "dismissAria": "scarta questa richiesta",
+    "answerPlaceholder": "La tua risposta — oppure 'fatto', con il risultato… (Ctrl+Enter per inviare)",
+    "sending": "invio…",
+    "respond": "rispondi e sblocca",
+    "viewAnswers": "VISUALIZZA {{count}} RISPOSTA PRECEDENTE",
+    "viewAnswersPlural": "VISUALIZZA {{count}} RISPOSTE PRECEDENTI",
+    "viewAnswersHistory": "apri il dettaglio del task con tutto lo storico di domande e risposte",
+    "blockingDownstream": "{{count}} TASK A VALLE BLOCCATO",
+    "blockingDownstreamPlural": "{{count}} TASK A VALLE BLOCCATI",
+    "more": "… +{{count}} altri"
   },
   "agentStrip": {
     "privateNote": "NOTA PRIVATA · {{name}}",
@@ -174,24 +174,24 @@
     "joinDiscord": "join Discord"
   },
   "officeTheme": {
-    "title": "Office Theme",
-    "tvShow": "TV-show office themes",
-    "experimental": "experimental",
-    "desc": "Re-skin the pixel office as a TV show. Switching starts a fresh cast.",
-    "current": "current",
-    "soon": "soon",
-    "notBuiltYet": "{{label}} isn't built yet — showing the office for now.",
-    "switchAborted": "Switch aborted — a terminal wouldn't close: {{error}}",
-    "confirmTitle": "SWITCH OFFICE TO \"{{label}}\"?",
-    "startsFreshCast": "STARTS A FRESH CAST",
-    "deleteCount": "Your {{count}} current agent will be deleted — their terminals close and any in-progress work stops.",
-    "deleteCountPlural": "Your {{count}} current agents will be deleted — their terminals close and any in-progress work stops.",
-    "onlyCarries": "Only {{god}} carries over.",
-    "stillWorking": "⚠ {{count}} agent is still working.",
-    "stillWorkingPlural": "⚠ {{count}} agents are still working.",
-    "cantUndo": "This can't be undone.",
-    "switching": "switching…",
-    "deleteSwitch": "delete {{count}} & switch"
+    "title": "Tema dell'ufficio",
+    "tvShow": "temi d'ufficio da serie TV",
+    "experimental": "sperimentale",
+    "desc": "Cambia l'aspetto dell'ufficio pixel come una serie TV. Il cambio fa ripartire il cast da zero.",
+    "current": "attuale",
+    "soon": "presto",
+    "notBuiltYet": "{{label}} non è ancora pronto — per ora viene mostrato l'ufficio.",
+    "switchAborted": "Cambio interrotto — un terminale non si è chiuso: {{error}}",
+    "confirmTitle": "CAMBIARE UFFICIO IN \"{{label}}\"?",
+    "startsFreshCast": "FA RIPARTIRE IL CAST DA ZERO",
+    "deleteCount": "Il tuo {{count}} agente attuale sarà eliminato — il suo terminale si chiude e il lavoro in corso si ferma.",
+    "deleteCountPlural": "I tuoi {{count}} agenti attuali saranno eliminati — i loro terminali si chiudono e il lavoro in corso si ferma.",
+    "onlyCarries": "Solo {{god}} sopravvive al cambio.",
+    "stillWorking": "⚠ {{count}} agente sta ancora lavorando.",
+    "stillWorkingPlural": "⚠ {{count}} agenti stanno ancora lavorando.",
+    "cantUndo": "Non si può annullare.",
+    "switching": "cambio…",
+    "deleteSwitch": "elimina {{count}} e cambia"
   },
   "settings": {
     "title": "IMPOSTAZIONI",
@@ -702,84 +702,84 @@
     "errEngineNotInstalled": "{{label}} non è installato. Installalo e premi \"controlla di nuovo\", oppure scegli un altro motore."
   },
   "office": {
-    "gpuError": "The office floor lost its GPU context.\n\nToo many terminals are using the GPU at once.\nClose a few agent terminals, or restart the app, to bring it back.",
+    "gpuError": "L'ufficio ha perso il contesto GPU.\n\nTroppi terminali stanno usando la GPU insieme.\nChiudi qualche terminale degli agenti, oppure riavvia l'app, per riaverlo.",
     "errand": {
       "water": [
-        "watering the plants 🌿",
-        "giving the plants a drink",
-        "they grow so fast"
+        "annaffio le piante 🌿",
+        "do da bere alle piante",
+        "crescono in fretta"
       ],
       "window": [
-        "letting some air in 🍃",
-        "a bit of fresh air",
-        "nice breeze today"
+        "faccio entrare un po' d'aria 🍃",
+        "una boccata d'aria fresca",
+        "bella brezza oggi"
       ],
       "dispenser": [
-        "getting some water 💧",
-        "hydration break",
-        "staying sharp"
+        "vado a prendere l'acqua 💧",
+        "pausa idratazione",
+        "resto lucido"
       ],
       "fridge": [
-        "anything good in the fridge?",
-        "who took my yogurt?",
-        "just looking…"
+        "c'è qualcosa di buono in frigo?",
+        "chi mi ha preso lo yogurt?",
+        "sto solo guardando…"
       ],
       "shelf": [
-        "checking out the shelf 📚",
-        "anything new in here?",
-        "so much good stuff"
+        "do un'occhiata allo scaffale 📚",
+        "c'è qualcosa di nuovo qui?",
+        "quanta roba buona"
       ],
       "bin": [
-        "out with the scrap paper 🗑️",
-        "desk cleanup day",
-        "tidying up a little"
+        "butto via gli scarti di carta 🗑️",
+        "giornata di pulizia della scrivania",
+        "metto un po' in ordine"
       ],
       "smoke": [
-        "the floor runs itself 🚬",
-        "boss break.",
-        "thinking big thoughts 🚬",
-        "I DECLARE… a break"
+        "l'ufficio va da sé 🚬",
+        "pausa da capo.",
+        "sto pensando in grande 🚬",
+        "IO DICHIARO… una pausa"
       ]
     },
     "suckUp": [
-      "already shipped {{done}} tasks, {{godName}}. raise? 🥺",
-      "{{done}} tasks done this week, boss!",
-      "great vision as always, boss!",
-      "I was JUST about to do exactly that!",
-      "love the tie today, {{godName}}",
-      "working hard, boss! 💪",
-      "best boss ever. genuinely."
+      "ho già consegnato {{done}} task, {{godName}}. aumento? 🥺",
+      "{{done}} task fatti questa settimana, capo!",
+      "che visione, capo, come sempre!",
+      "stavo PROPRIO per farlo!",
+      "bella cravatta oggi, {{godName}}",
+      "sto dando il massimo, capo! 💪",
+      "il miglior capo di sempre. davvero."
     ],
     "gossip": [
-      "has he ever actually written code?",
-      "another 'quick sync' that took an hour…",
-      "'world's best boss' — he bought that mug himself",
-      "he pinned MY task as his idea",
-      "the cigar smell, honestly…",
-      "he watered the plant. ONE plant. his own.",
-      "did you hear him? 'I DECLARE… a break'"
+      "ma ha mai scritto una riga di codice?",
+      "un altro 'allineamento veloce' durato un'ora…",
+      "'il miglior capo del mondo' — la tazza se l'è comprata da solo",
+      "si è preso il merito del MIO task",
+      "l'odore di sigaro, insomma…",
+      "ha annaffiato la pianta. UNA pianta. la sua.",
+      "l'hai sentito? 'IO DICHIARO… una pausa'"
     ],
     "cheer": [
-      "done! ✔",
-      "nailed it",
-      "that's a wrap",
-      "ship it 🚀",
-      "another one done",
-      "crushed it",
-      "in the books"
+      "fatto! ✔",
+      "presa in pieno",
+      "è tutto",
+      "spediamolo 🚀",
+      "un altro ancora",
+      "asfaltato",
+      "messo agli atti"
     ],
     "mugs": {
-      "empty": "no clean mugs left…",
-      "brewing": "brewing a fresh one ☕",
-      "washing": "washing the mug"
+      "empty": "non restano tazze pulite…",
+      "brewing": "ne preparo una fresca ☕",
+      "washing": "lavo la tazza"
     },
     "activity": {
-      "waiting": "waiting",
-      "needsYou": "needs you",
-      "compacting": "compacting context",
-      "looping": "looping — breaker armed",
-      "runningFloor": "running the floor",
-      "idle": "idle"
+      "waiting": "in attesa",
+      "needsYou": "richiede attenzione",
+      "compacting": "compatta il contesto",
+      "looping": "in loop — interruttore armato",
+      "runningFloor": "comanda l'ufficio",
+      "idle": "inattivo"
     }
   },
   "setupPanel": {
@@ -1058,13 +1058,13 @@
   },
   "fileEditor": {
     "file": "FILE",
-    "edit": "edit",
-    "preview": "preview",
-    "editTitle": "Edit the source",
-    "previewTitle": "Rendered preview (of the saved file)",
-    "openInIde": "open in IDE",
-    "openInIdeTitle": "Open this file in the full IDE",
-    "closeTitle": "Close (Esc)"
+    "edit": "modifica",
+    "preview": "anteprima",
+    "editTitle": "Modifica il sorgente",
+    "previewTitle": "Anteprima renderizzata (del file salvato)",
+    "openInIde": "apri nell'IDE",
+    "openInIdeTitle": "Apri questo file nell'IDE completo",
+    "closeTitle": "Chiudi (Esc)"
   },
   "gitTab": {
     "notARepo": "Not a git repo.",
@@ -1191,21 +1191,21 @@
     "keptAgo": "conservato {{age}} fa"
   },
   "memoryGraph": {
-    "topics": "topics",
-    "refresh": "refresh",
-    "readingMemory": "reading memory…",
-    "topicsShown": "showing {{shown}} of {{total}} topics",
-    "loadingMemory": "loading memory…",
-    "messageLinks": "{{count}} message links",
-    "knowsAbout": "{{a}} knows about “{{b}}”",
-    "messagesLast": "{{count}} messages · last: {{act}}",
-    "noMemory": "No memory recorded yet.",
-    "legendRequest": "request",
-    "legendQuery": "query",
-    "legendPropose": "propose",
-    "legendAgreeDone": "agree/done",
-    "legendRefuse": "refuse",
-    "legendInformTopic": "inform/topic"
+    "topics": "argomenti",
+    "refresh": "aggiorna",
+    "readingMemory": "lettura della memoria…",
+    "topicsShown": "mostrati {{shown}} di {{total}} argomenti",
+    "loadingMemory": "caricamento della memoria…",
+    "messageLinks": "{{count}} collegamenti tra messaggi",
+    "knowsAbout": "{{a}} sa di “{{b}}”",
+    "messagesLast": "{{count}} messaggi · ultimo: {{act}}",
+    "noMemory": "Nessuna memoria registrata.",
+    "legendRequest": "richiesta",
+    "legendQuery": "domanda",
+    "legendPropose": "proposta",
+    "legendAgreeDone": "accordo/fatto",
+    "legendRefuse": "rifiuto",
+    "legendInformTopic": "informa/argomento"
   },
   "integrations": {
     "errLabel": "Serve un'etichetta.",
@@ -1272,24 +1272,24 @@
     "edit": "modifica"
   },
   "kanban": {
-    "count": "{{count}} tasks",
-    "newWorkHint": "new work? dispatch it to {{godName}} (monitor tab)",
-    "colTodo": "TODO",
-    "colDoing": "DOING",
-    "colBlocked": "BLOCKED",
-    "colDone": "DONE",
-    "openTaskDetails": "open task details",
-    "needsYouTitle": "waiting on YOUR answer — see the ASK ME tab",
-    "dismissTitle": "dismiss this task (removes it from the board)",
-    "dismissAria": "dismiss task",
+    "count": "{{count}} task",
+    "newWorkHint": "lavoro nuovo? invialo a {{godName}} (scheda monitoraggio)",
+    "colTodo": "DA FARE",
+    "colDoing": "IN CORSO",
+    "colBlocked": "BLOCCATO",
+    "colDone": "FATTO",
+    "openTaskDetails": "apri i dettagli del task",
+    "needsYouTitle": "in attesa della TUA risposta — vedi la scheda CHIEDIMI",
+    "dismissTitle": "scarta questo task (lo toglie dalla bacheca)",
+    "dismissAria": "scarta il task",
     "taskTitle": "TASK",
-    "unassigned": "unassigned",
-    "noDescription": "(no description on this card)",
-    "humanQA": "HUMAN Q&A",
-    "awaitingAnswer": "AWAITING YOUR ANSWER — ASK ME TAB",
-    "dependsOn": "DEPENDS ON",
-    "assign": "assign",
-    "priority": "Priority {{level}}/5"
+    "unassigned": "non assegnato",
+    "noDescription": "(nessuna descrizione su questa scheda)",
+    "humanQA": "DOMANDE E RISPOSTE UMANE",
+    "awaitingAnswer": "IN ATTESA DELLA TUA RISPOSTA — SCHEDA CHIEDIMI",
+    "dependsOn": "DIPENDE DA",
+    "assign": "assegna",
+    "priority": "Priorità {{level}}/5"
   },
   "queueComposer": {
     "recording": "● registrazione — clic per interrompere e trascrivere",

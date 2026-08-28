@@ -151,7 +151,11 @@ test('no Italian string is left as its English source', () => {
     'idePanel.diff',                         // "DIFF"
     // "base: {{branch}}" — base is the same word in Italian, and the label is a
     // compact badge with no room for a paraphrase.
-    'workersTab.base'
+    'workersTab.base',
+    // "TASK" and "FILE" are spelled the same in Italian — task because the
+    // glossary keeps it English, file because it is simply the same word.
+    'kanban.taskTitle',                      // "TASK"
+    'fileEditor.file'                        // "FILE"
   ]);
   const e = pathsOf(en), i = pathsOf(it);
   const untranslated = [];
