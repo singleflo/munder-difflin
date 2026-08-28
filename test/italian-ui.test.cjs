@@ -137,7 +137,10 @@ test('no Italian string is left as its English source', () => {
     // glossary itself uses ("budget dell'ufficio", "Budget token complessivo").
     // Inventing a different word here just to look translated would contradict
     // the glossary everywhere else.
-    'commandCenter.budget'
+    'commandCenter.budget',
+    // "Free Flow" is the name of the dictation feature, the same class of thing
+    // as "Talk". Feature names are not translated, so this one stays English.
+    'settings.voice.freeFlow'
   ]);
   const e = pathsOf(en), i = pathsOf(it);
   const untranslated = [];
