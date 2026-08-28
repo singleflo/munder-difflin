@@ -140,7 +140,12 @@ test('no Italian string is left as its English source', () => {
     'commandCenter.budget',
     // "Free Flow" is the name of the dictation feature, the same class of thing
     // as "Talk". Feature names are not translated, so this one stays English.
-    'settings.voice.freeFlow'
+    'settings.voice.freeFlow',
+    // "prompt" and "task" are invariant in Italian developer usage — the glossary
+    // keeps both English on purpose — so these two headings, which are the bare
+    // word plus a placeholder, come out identical to English by construction.
+    'schedulesSection.prompt',               // "PROMPT"
+    'triggerHistory.task'                    // "TASK {{id}}"
   ]);
   const e = pathsOf(en), i = pathsOf(it);
   const untranslated = [];
