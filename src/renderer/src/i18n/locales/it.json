@@ -475,106 +475,106 @@
     "openIdeAria": "Apri l'IDE"
   },
   "addAgent": {
-    "title": "ADD AGENT",
-    "hireImported": "hire imported:",
-    "byAuthor": " · by {{author}}",
-    "reviewFields": "review every field — especially the command — before spawning.",
-    "hireFlags": "⚠️ flags this hire appends to the command:",
-    "hireSkills": "skills this hire activates:",
-    "mcpSafe": "MCP servers (safe, pre-enabled):",
-    "mcpConsent": "⚠️ MCP (needs your consent — NOT auto-enabled):",
-    "mcpEnableInSettings": "— enable in Settings → MCP after reviewing",
+    "title": "AGGIUNGI AGENTE",
+    "hireImported": "assunto importato:",
+    "byAuthor": " · di {{author}}",
+    "reviewFields": "esamina ogni campo — soprattutto il comando — prima di creare.",
+    "hireFlags": "⚠️ flag che questo assunto aggiunge al comando:",
+    "hireSkills": "skill che questo assunto attiva:",
+    "mcpSafe": "Server MCP (sicuri, già abilitati):",
+    "mcpConsent": "⚠️ MCP (richiede consenso — NON abilitati automaticamente):",
+    "mcpEnableInSettings": "— abilitali in Impostazioni → MCP dopo averli esaminati",
     "sections": {
       "identity": {
-        "label": "Identity",
-        "hint": "name · character · color"
+        "label": "Identità",
+        "hint": "nome · personaggio · colore"
       },
       "workspace": {
-        "label": "Workspace",
-        "hint": "folder · isolation · resume"
+        "label": "Spazio di lavoro",
+        "hint": "cartella · isolamento · ripresa"
       },
       "engine": {
-        "label": "Engine",
-        "hint": "provider · model · command"
+        "label": "Motore",
+        "hint": "provider · modello · comando"
       },
       "briefing": {
-        "label": "Briefing",
-        "hint": "description · goal"
+        "label": "Istruzioni",
+        "hint": "descrizione · obiettivo"
       }
     },
-    "name": "Name",
+    "name": "Nome",
     "namePlaceholder": "Ada",
-    "character": "Character",
-    "color": "Color",
-    "project": "Project",
-    "pickProject": "Pick a project, or add a new one:",
-    "noProjects": "No projects yet — add one to get started:",
-    "addProject": "add project",
-    "addProjectTitle": "Pick a folder and register it as a project",
+    "character": "Personaggio",
+    "color": "Colore",
+    "project": "Progetto",
+    "pickProject": "Scegli un progetto, oppure aggiungine uno nuovo:",
+    "noProjects": "Ancora nessun progetto — aggiungine uno per iniziare:",
+    "addProject": "aggiungi progetto",
+    "addProjectTitle": "Scegli una cartella e registrala come progetto",
     "projectPlaceholder": "/path/to/your/project",
-    "pick": "pick",
-    "saveAsProject": "save as project",
-    "saveAsProjectTitle": "Save this folder to your projects so it's a one-click pick next time",
-    "gitIsolation": "Git isolation (own worktree)",
-    "resumeSession": "Resume session ID (optional)",
-    "resumePlaceholder": "paste a Claude session id to continue its conversation",
-    "folderFromSession": "folder set from session: {{path}}",
-    "resumeNote": "Will resume this session in the chosen folder (git isolation disabled).",
-    "provider": "Provider",
-    "providerAntigravity": "Spawn the Antigravity CLI (agy) with a Gemini model",
-    "providerCodex": "Spawn the Codex CLI (codex) without Claude-only flags",
-    "providerCustom": "Run any command — no Claude-only flags",
-    "model": "Model",
-    "cliDefaultModel": "CLI default model",
-    "fromHire": "{{model}} (from hire)",
-    "ossModels": "OSS models",
-    "ossLocal": "Local · no key (Ollama / LM Studio)",
-    "ossByok": "Via OSS provider · BYOK",
-    "ossLocalTitle": "{{slug}} · needs ~{{ram}} RAM — pull with: ollama pull {{tag}}",
-    "ossByokTitle": "{{slug}} · set {{keyEnv}} in Settings → AI Engines",
-    "byokNote": "BYOK keys & local endpoints for this engine live in Settings → AI Engines. New to local models? Read run on open models or set up on a Mac Mini. Live end-to-end is pending real model calls (verify on-device).",
-    "runOnOpenModels": "run on open models",
-    "setUpMacMini": "set up on a Mac Mini",
-    "command": "Command",
-    "commandAuto": "Command (auto mode on)",
-    "templates": "Templates",
+    "pick": "scegli",
+    "saveAsProject": "salva come progetto",
+    "saveAsProjectTitle": "Salva questa cartella nei progetti, così la prossima volta basta un clic",
+    "gitIsolation": "Isolamento git (worktree dedicato)",
+    "resumeSession": "ID sessione da riprendere (facoltativo)",
+    "resumePlaceholder": "incolla un id di sessione Claude per continuarne la conversazione",
+    "folderFromSession": "cartella impostata dalla sessione: {{path}}",
+    "resumeNote": "Riprenderà questa sessione nella cartella scelta (isolamento git disattivato).",
+    "provider": "Provider AI",
+    "providerAntigravity": "Crea la CLI Antigravity (agy) con un modello Gemini",
+    "providerCodex": "Crea la CLI Codex (codex) senza i flag esclusivi di Claude",
+    "providerCustom": "Esegui qualsiasi comando — nessun flag esclusivo di Claude",
+    "model": "Modello",
+    "cliDefaultModel": "Modello predefinito della CLI",
+    "fromHire": "{{model}} (dall'assunto)",
+    "ossModels": "Modelli OSS",
+    "ossLocal": "Locale · senza chiave (Ollama / LM Studio)",
+    "ossByok": "Tramite provider OSS · BYOK",
+    "ossLocalTitle": "{{slug}} · richiede ~{{ram}} di RAM — scaricalo con: ollama pull {{tag}}",
+    "ossByokTitle": "{{slug}} · imposta {{keyEnv}} in Impostazioni → Motori AI",
+    "byokNote": "Le chiavi BYOK e gli endpoint locali di questo motore stanno in Impostazioni → Motori AI. Prima volta con i modelli locali? Leggi esegui su modelli aperti oppure configura su un Mac Mini. La verifica end-to-end con chiamate reali ai modelli è ancora in sospeso (da controllare sul dispositivo).",
+    "runOnOpenModels": "esegui su modelli aperti",
+    "setUpMacMini": "configura su un Mac Mini",
+    "command": "Comando",
+    "commandAuto": "Comando (modalità auto attiva)",
+    "templates": "Template",
     "templatesHint": {
       "repoJanitor": {
-        "label": "Repo janitor"
+        "label": "Custode del repo"
       },
       "docsWriter": {
-        "label": "Docs writer"
+        "label": "Redattore della documentazione"
       },
       "bugTriager": {
-        "label": "Bug triager"
+        "label": "Smistatore di bug"
       },
       "researchAssistant": {
-        "label": "Research assistant"
+        "label": "Assistente di ricerca"
       },
       "releaseManager": {
-        "label": "Release manager"
+        "label": "Gestore dei rilasci"
       }
     },
-    "description": "Description",
-    "descriptionPlaceholder": "job — what this agent is for, not live status",
-    "goal": "Goal (optional)",
-    "goalPlaceholder": "long-running directive injected on every prompt",
-    "importHire": "Import hire",
-    "importHireDesc": "Import hire loads a ready-made agent from a .json manifest — it fills in every field below for you to review. Nothing spawns until you hit spawn.",
-    "generateWithAI": "generate one with AI…",
-    "hideAIPrompt": "hide AI prompt",
-    "aiPromptHint": "Copy this into Claude/ChatGPT/Gemini, fill in the details at the bottom, then save its JSON reply as a .json file and import it here.",
-    "copied": "copied ✓",
-    "copyPrompt": "copy prompt",
-    "importHireBtn": "import hire…",
-    "importHireBtnTitle": "Import a hire manifest (.json)",
-    "spawn": "spawn",
-    "spawning": "spawning...",
-    "errName": "Name is required",
-    "errFolder": "Pick a folder first",
-    "errCommand": "Command is required",
-    "hireProgress": "hire {{current}} of {{total}}",
-    "skipHire": "skip hire"
+    "description": "Descrizione",
+    "descriptionPlaceholder": "mansione — a cosa serve questo agente, non lo stato attuale",
+    "goal": "Obiettivo (facoltativo)",
+    "goalPlaceholder": "direttiva di lunga durata iniettata a ogni prompt",
+    "importHire": "Importa assunto",
+    "importHireDesc": "Importa assunto carica un agente già pronto da un manifest .json — riempie ogni campo qui sotto, pronto per la revisione. Nulla viene creato finché non si preme crea.",
+    "generateWithAI": "generane uno con l'AI…",
+    "hideAIPrompt": "nascondi il prompt AI",
+    "aiPromptHint": "Copia questo in Claude/ChatGPT/Gemini, completa i dettagli in fondo, poi salva la risposta JSON come file .json e importalo qui.",
+    "copied": "copiato ✓",
+    "copyPrompt": "copia prompt",
+    "importHireBtn": "importa assunto…",
+    "importHireBtnTitle": "Importa un manifest di assunto (.json)",
+    "spawn": "crea",
+    "spawning": "creazione...",
+    "errName": "Il nome è obbligatorio",
+    "errFolder": "Scegli prima una cartella",
+    "errCommand": "Il comando è obbligatorio",
+    "hireProgress": "assunto {{current}} di {{total}}",
+    "skipHire": "salta assunto"
   },
   "onboarding": {
     "titles": {
@@ -814,21 +814,21 @@
     }
   },
   "aiEngines": {
-    "providers": "AI ENGINE PROVIDERS (BYOK)",
-    "providersDesc": "API keys + local endpoints for the OpenCode, Crush, pi.dev and Qwen engines. Keys are stored write-only (encrypted at rest; never shown again) and used only when those engines spawn. Claude Code and Codex use their own login.",
-    "apiKeys": "API KEYS",
-    "setCheck": "set ✓",
-    "keyStoredPlaceholder": "•••••••• (stored — type to replace)",
-    "keyPlaceholder": "paste {{label}} key",
-    "saved": "saved",
-    "failed": "failed",
-    "cleared": "cleared",
-    "localEndpoint": "LOCAL ENDPOINT · DEFAULT MODEL (PER ENGINE)",
-    "defaultModelPlaceholder": "default model (provider/model)",
-    "runningOpenModels": "Running open models? Step-by-step guides:",
-    "runOnOpenModels": "run Munder Difflin on open models",
-    "setUpMacMini": "set it up on a Mac Mini",
-    "autoModeCaveat": "⚠ In auto mode these engines run with full filesystem + shell access (no sandbox) — like Claude's bypass mode. Turn auto mode off (General) to make them ask first. Live end-to-end verification with real model calls is pending your keys / a local LLM."
+    "providers": "PROVIDER DEI MOTORI AI (BYOK)",
+    "providersDesc": "Chiavi API ed endpoint locali per i motori OpenCode, Crush, pi.dev e Qwen. Le chiavi sono conservate in sola scrittura (cifrate a riposo; mai più mostrate) e usate solo alla creazione di quei motori. Claude Code e Codex usano il proprio login.",
+    "apiKeys": "CHIAVI API",
+    "setCheck": "impostata ✓",
+    "keyStoredPlaceholder": "•••••••• (memorizzata — scrivi per sostituirla)",
+    "keyPlaceholder": "incolla la chiave {{label}}",
+    "saved": "salvata",
+    "failed": "non riuscita",
+    "cleared": "cancellata",
+    "localEndpoint": "ENDPOINT LOCALE · MODELLO PREDEFINITO (PER MOTORE)",
+    "defaultModelPlaceholder": "modello predefinito (provider/modello)",
+    "runningOpenModels": "Modelli aperti? Guide passo passo:",
+    "runOnOpenModels": "esegui Munder Difflin su modelli aperti",
+    "setUpMacMini": "configuralo su un Mac Mini",
+    "autoModeCaveat": "⚠ In modalità auto questi motori girano con accesso completo a filesystem e shell (nessuna sandbox) — come la modalità bypass di Claude. Disattiva la modalità auto (Generali) per farli chiedere prima. La verifica end-to-end con chiamate reali ai modelli attende le tue chiavi o un LLM locale."
   },
   "mcpDefaults": {
     "title": "Default MCP servers",
@@ -845,10 +845,10 @@
     }
   },
   "devicePicker": {
-    "microphone": "Microphone",
-    "speaker": "Speaker",
-    "systemDefault": "System default",
-    "namesHint": "Device names appear after you first start a voice session and grant mic access. The microphone choice applies the next time {{godName}} connects; the speaker switches live."
+    "microphone": "Microfono",
+    "speaker": "Altoparlante",
+    "systemDefault": "Predefinito di sistema",
+    "namesHint": "I nomi dei dispositivi compaiono dopo il primo avvio di una sessione vocale e la concessione dell'accesso al microfono. La scelta del microfono vale dalla connessione successiva di {{godName}}; l'altoparlante cambia subito."
   },
   "realtimeToggle": {
     "talk": "parla",
@@ -993,15 +993,15 @@
     "keep": "keep"
   },
   "triggersUi": {
-    "custom": "custom",
-    "customEllipsis": "custom…",
+    "custom": "personalizzato",
+    "customEllipsis": "personalizzato…",
     "min": "min",
-    "every": "every…",
-    "onDays": "on days…",
-    "at": "at",
-    "weekdays": "weekdays",
-    "everyDay": "every day",
-    "pickDayHint": "Pick at least one day, or this will never run."
+    "every": "ogni…",
+    "onDays": "nei giorni…",
+    "at": "alle",
+    "weekdays": "giorni feriali",
+    "everyDay": "ogni giorno",
+    "pickDayHint": "Scegli almeno un giorno, altrimenti non verrà mai eseguito."
   },
   "triggerHistory": {
     "justNow": "just now",
