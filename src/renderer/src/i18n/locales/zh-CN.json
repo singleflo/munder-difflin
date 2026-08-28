@@ -706,6 +706,20 @@
     "errCreateHome": "无法创建 harness 主文件夹",
     "errEngineNotInstalled": "{{label}} 尚未安装。请先安装它并点击“重新检查”，或选择其他引擎。"
   },
+  "hivePicker": {
+    "title": "选择一个 harness 配置",
+    "intro": "<strong>harness 配置</strong>是应用为一个工作区保存全部内容的文件夹——它的设置、你的智能体及其记忆、任务、触发器和历史记录。每个配置相互独立、自成一体，因此可以并行运行不同的设置。打开你之前使用的那个，切换到另一个，或者新建一个。",
+    "current": "当前",
+    "open": "打开",
+    "recent": "最近",
+    "switchTitle": "切换到 {{path}}（会重新加载应用）",
+    "opening": "正在打开…",
+    "switchTo": "切换 →",
+    "couldNotOpen": "无法打开该文件夹。",
+    "openingReload": "正在打开 {{name}}——应用将重新加载…",
+    "openExisting": "打开现有配置…",
+    "createNew": "新建配置…"
+  },
   "office": {
     "gpuError": "办公楼层丢失了 GPU 上下文。\n\n同时使用 GPU 的终端太多了。\n关闭几个智能体终端，或重启应用，即可恢复。",
     "errand": {

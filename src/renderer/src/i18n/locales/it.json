@@ -706,6 +706,20 @@
     "errCreateHome": "impossibile creare la home dell'harness",
     "errEngineNotInstalled": "{{label}} non è installato. Installalo e premi \"controlla di nuovo\", oppure scegli un altro motore."
   },
+  "hivePicker": {
+    "title": "SELEZIONA UNA CONFIGURAZIONE HARNESS",
+    "intro": "Una <strong>configurazione harness</strong> è la cartella in cui l'app conserva tutto ciò che riguarda uno spazio di lavoro — le sue impostazioni, i tuoi agenti con la loro memoria, i task, i trigger e la cronologia. Ogni configurazione è separata e autosufficiente, quindi si possono tenere in piedi setup diversi in parallelo. Apri quella su cui stavi lavorando, passa a un'altra, oppure creane una nuova.",
+    "current": "ATTUALE",
+    "open": "apri",
+    "recent": "RECENTI",
+    "switchTitle": "Passa a {{path}} (ricarica l'app)",
+    "opening": "apertura…",
+    "switchTo": "passa →",
+    "couldNotOpen": "Impossibile aprire quella cartella.",
+    "openingReload": "Apertura di {{name}} — l'app si ricaricherà…",
+    "openExisting": "apri una configurazione esistente…",
+    "createNew": "crea una nuova configurazione…"
+  },
   "office": {
     "gpuError": "L'ufficio ha perso il contesto GPU.\n\nTroppi terminali stanno usando la GPU insieme.\nChiudi qualche terminale degli agenti, oppure riavvia l'app, per riaverlo.",
     "errand": {
