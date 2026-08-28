@@ -126,10 +126,10 @@
     "restoreAll": "ripristina tutti ({{count}})"
   },
   "sidebar": {
-    "terminal": "terminal",
+    "terminal": "terminale",
     "git": "git",
-    "messages": "messages",
-    "traces": "traces"
+    "messages": "messaggi",
+    "traces": "tracce"
   },
   "toolWaterfall": {
     "fresh": "fresh {{tokens}}t",
@@ -578,61 +578,61 @@
   },
   "onboarding": {
     "titles": {
-      "persona": "WELCOME TO MUNDER DIFFLIN",
-      "welcome": "MEET YOUR OFFICE",
-      "home": "STEP 1 OF 4 · HARNESS HOME",
-      "homePlain": "STEP 1 OF 4 · A HOME FOR THE APP",
-      "orchestrator": "STEP 2 OF 4 · YOUR CLONE'S ENGINE",
-      "orchestratorPlain": "STEP 2 OF 4 · YOUR CLONE",
-      "repos": "STEP 3 OF 4 · YOUR REPOS",
-      "reposPlain": "STEP 3 OF 4 · YOUR PROJECTS",
-      "permissions": "STEP 4 OF 4 · PERMISSIONS & RELIABILITY",
-      "done": "ALL SET"
+      "persona": "BENVENUTO IN MUNDER DIFFLIN",
+      "welcome": "ECCO IL TUO UFFICIO",
+      "home": "PASSO 1 DI 4 · HOME DELL'HARNESS",
+      "homePlain": "PASSO 1 DI 4 · UNA HOME PER L'APP",
+      "orchestrator": "PASSO 2 DI 4 · IL MOTORE DEL TUO CLONE",
+      "orchestratorPlain": "PASSO 2 DI 4 · IL TUO CLONE",
+      "repos": "PASSO 3 DI 4 · I TUOI REPO",
+      "reposPlain": "PASSO 3 DI 4 · I TUOI PROGETTI",
+      "permissions": "PASSO 4 DI 4 · PERMESSI E AFFIDABILITÀ",
+      "done": "TUTTO PRONTO"
     },
     "persona": {
-      "headline": "A CLONE OF YOU, WORKING 24/7",
-      "body": "Munder Difflin turns the CLI agent you already use into a clone of you — one that runs an office of long-running agents and keeps working while you're away. It manages everything around them: context, memory, tasks, triggers, environment, files, and integrations.",
-      "bodyLocal": " Everything runs on this machine.",
-      "ask": "FIRST — WHO ARE YOU? (we'll tailor the setup)",
-      "technicalTitle": "I'M TECHNICAL",
-      "technicalDesc": "I write code or work in a terminal. Show me CLI commands, flags, and model ids.",
-      "nonTechnicalTitle": "I'M NON-TECHNICAL",
-      "nonTechnicalDesc": "I'm in marketing, sales, ops, or just starting out. Explain things in plain language."
+      "headline": "UN TUO CLONE, AL LAVORO 24 ORE SU 24",
+      "body": "Munder Difflin trasforma l'agente CLI che già usi in un tuo clone — che comanda un ufficio di agenti di lunga durata e continua a lavorare anche in tua assenza. Gestisce tutto ciò che sta loro intorno: contesto, memoria, task, trigger, ambiente, file e integrazioni.",
+      "bodyLocal": " Tutto viene eseguito su questa macchina.",
+      "ask": "PRIMA DI TUTTO — CHI SEI? (adatteremo la configurazione)",
+      "technicalTitle": "SONO TECNICO",
+      "technicalDesc": "Scrivo codice o lavoro nel terminale. Mostrami comandi CLI, flag e id dei modelli.",
+      "nonTechnicalTitle": "NON SONO TECNICO",
+      "nonTechnicalDesc": "Lavoro nel marketing, nelle vendite, nelle operation, oppure sto iniziando adesso. Spiegami le cose in linguaggio comune."
     },
     "welcome": {
-      "headline": "YOUR CLONE AND THE FLOOR IT RUNS",
-      "descPlain": "Your clone runs a small office of AI workers, and you watch it all from one screen. Here's what's inside:",
-      "desc": "Your clone coordinates a hive of AI coding agents — persistent, watchable, all local. Here's what's inside:",
+      "headline": "IL TUO CLONE E L'UFFICIO CHE COMANDA",
+      "descPlain": "Il tuo clone comanda un piccolo ufficio di worker AI, e tutto si segue da una sola schermata. Ecco cosa c'è dentro:",
+      "desc": "Il tuo clone coordina un hive di agenti AI di programmazione — persistenti, osservabili, tutti in locale. Ecco cosa c'è dentro:",
       "features": {
         "engines": {
-          "label": "ELEVEN ENGINES, ONE OFFICE",
-          "desc": "Claude Code, Codex, Grok, Kimi, Antigravity, Qwen, OpenCode, Crush, pi, Copilot & Cursor — live agents on one floor.",
-          "descPlain": "Eleven AI assistants — Claude, Codex, Cursor, Gemini, Grok and more — working side by side in one shared office."
+          "label": "UNDICI MOTORI, UN SOLO UFFICIO",
+          "desc": "Claude Code, Codex, Grok, Kimi, Antigravity, Qwen, OpenCode, Crush, pi, Copilot e Cursor — agenti vivi in un solo ufficio.",
+          "descPlain": "Undici assistenti AI — Claude, Codex, Cursor, Gemini, Grok e altri — al lavoro fianco a fianco in un unico ufficio condiviso."
         },
         "clone": {
-          "label": "{{godName}} IS YOUR CLONE",
-          "desc": "Your clone runs the floor — triages requests, routes tasks, and escalates only what needs you.",
-          "descPlain": "Your clone, {{godName}}, takes your requests, hands work to the right agent, and only interrupts you when it matters."
+          "label": "{{godName}} È IL TUO CLONE",
+          "desc": "Il tuo clone comanda l'ufficio — smista le richieste, instrada i task e fa salire solo ciò che ha bisogno di te.",
+          "descPlain": "Il tuo clone, {{godName}}, prende le tue richieste, affida il lavoro all'agente giusto e interrompe solo quando serve davvero."
         },
         "memory": {
-          "label": "LONG-TERM MEMORY",
-          "desc": "Each agent keeps notes, mined into a shared, searchable MemPalace.",
-          "descPlain": "Agents remember what they've done, so they don't start from scratch every time."
+          "label": "MEMORIA A LUNGO TERMINE",
+          "desc": "Ogni agente tiene appunti, raccolti in un MemPalace condiviso e ricercabile.",
+          "descPlain": "Gli agenti ricordano quello che hanno fatto, così non ripartono da zero ogni volta."
         },
         "commandCenter": {
-          "label": "COMMAND CENTER",
-          "desc": "Terminal · Floor · Memory · Activity · Tasks · Triggers in one control surface.",
-          "descPlain": "One dashboard to watch the work, the agents' memory, tasks, and triggers."
+          "label": "CENTRO DI COMANDO",
+          "desc": "Terminale · Ufficio · Memoria · Attività · Task · Trigger in un'unica plancia di comando.",
+          "descPlain": "Un'unica dashboard per seguire il lavoro, la memoria degli agenti, i task e i trigger."
         },
         "guardrails": {
-          "label": "GUARDRAILS",
-          "desc": "Per-agent token budgets, a steer→constrain→stop circuit breaker, and human approvals.",
-          "descPlain": "Spending limits and safety stops keep agents in check — and they can ask you before big actions."
+          "label": "PROTEZIONI",
+          "desc": "Budget token per agente, un interruttore di sicurezza pilota→vincola→arresta e approvazioni umane.",
+          "descPlain": "Limiti di spesa e arresti di sicurezza tengono gli agenti sotto controllo — e possono chiedere conferma prima delle azioni importanti."
         },
         "hires": {
-          "label": "READY-MADE HIRES",
-          "desc": "Grab a pre-configured agent from the Agent Gallery and spawn it in one click.",
-          "descPlain": "Hire a ready-made agent from the gallery in one click — no setup needed."
+          "label": "ASSUNTI PRONTI ALL'USO",
+          "desc": "Prendi un agente già configurato dall'Agent Gallery e crealo con un clic.",
+          "descPlain": "Assumi un agente già pronto dalla galleria con un clic — nessuna configurazione."
         }
       }
     },
@@ -640,66 +640,66 @@
       "claude": "Claude Code — Anthropic",
       "codex": "Codex — OpenAI",
       "antigravity": "Antigravity — Google Gemini",
-      "qwen": "Qwen — runs a local Qwen model on your machine",
+      "qwen": "Qwen — esegue un modello Qwen locale sulla macchina",
       "gemini": "Gemini CLI - Google Gemini",
-      "cursor": "Cursor Agent CLI — uses your Cursor credits (Luna, Composer, …)"
+      "cursor": "Cursor Agent CLI — usa i tuoi crediti Cursor (Luna, Composer, …)"
     },
     "home": {
-      "descPlain": "Create a new, empty folder for the app to call home. Everything the app remembers — its own settings and your agents' memory — is stored here. Something like ~/HarnessAgents works well. We'll create it for you if it doesn't exist.",
-      "desc": "Pick a folder where the harness will keep its own files — agent metadata, logs, and any new repos you create from here. Something like ~/HarnessAgents is a fine default. We'll create it if it doesn't exist.",
+      "descPlain": "Crea una cartella nuova e vuota che l'app userà come casa. Tutto ciò che l'app ricorda — le sue impostazioni e la memoria dei tuoi agenti — viene conservato qui. Qualcosa come ~/HarnessAgents va benissimo. La creiamo noi se non esiste.",
+      "desc": "Scegli una cartella dove l'harness terrà i propri file — metadati degli agenti, log e i nuovi repo creati da qui. Qualcosa come ~/HarnessAgents è un buon valore predefinito. La creiamo noi se non esiste.",
       "placeholder": "/path/to/HarnessAgents",
-      "createPick": "create / pick",
-      "pick": "pick",
-      "notePlain": "You won't need to open this folder day-to-day — it's just where the app keeps its notes so nothing is lost when you restart.",
-      "note": "Think of this as the \"town hall.\" The harness pins agent state there so sessions can be picked back up after a restart."
+      "createPick": "crea / scegli",
+      "pick": "scegli",
+      "notePlain": "Non servirà aprire questa cartella tutti i giorni — è solo il posto dove l'app tiene i suoi appunti, così nulla va perso al riavvio.",
+      "note": "Immaginala come il \"municipio\". L'harness ci fissa lo stato degli agenti, così le sessioni si riprendono dopo un riavvio."
     },
     "orchestrator": {
-      "descPlain": "{{godName}} is your clone — he reads your requests, breaks them into tasks, and hands them to the right agent. He's the boss of the floor; you're still the boss of him. Choose which AI engine powers him.",
-      "desc": "{{godName}} is your clone — the boss of the floor you just met. He triages your requests, assigns tasks, and manages the team, while escalating anything that genuinely needs you. Pick the engine and model that power him; give him a longer-context, higher-capability model.",
-      "cliAgentPlain": "A <strong>CLI agent</strong> is an AI coding assistant that runs on your computer — popular ones are Claude Code (Anthropic), Codex (OpenAI) and Antigravity (Google Gemini). <strong>Your clone</strong> is the always-on one that runs your whole office. We recommend Claude Code on Opus 4.8 (1M). You can add or switch the others later.",
-      "cliAgent": "Each option is a <strong>CLI engine</strong> (Claude Code, Codex, Antigravity/Gemini, or a local proxy like Qwen). Engines marked INSTALLED are already on this machine; INSTALLS ON FIRST RUN means the app sets it up when {{godName}} first starts. <strong>Your clone</strong> ({{godName}}) is the engine that orchestrates the whole hive. Recommended: Claude Code · Opus 4.8 · 1M. Other providers can be wired per agent later.",
-      "recommended": "RECOMMENDED",
-      "model": "Model",
-      "modelNote": "This only sets {{godName}}'s engine. You can run other providers per agent later."
+      "descPlain": "{{godName}} è il tuo clone — legge le tue richieste, le scompone in task e le affida all'agente giusto. È il capo dell'ufficio; tu resti il capo suo. Scegli quale motore AI lo alimenta.",
+      "desc": "{{godName}} è il tuo clone — il capo dell'ufficio appena incontrato. Smista le tue richieste, assegna i task e gestisce la squadra, facendo salire solo ciò che ha davvero bisogno di te. Scegli il motore e il modello che lo alimentano; dagli un modello con più contesto e più capacità.",
+      "cliAgentPlain": "Un <strong>agente CLI</strong> è un assistente di programmazione AI che gira sul tuo computer — i più diffusi sono Claude Code (Anthropic), Codex (OpenAI) e Antigravity (Google Gemini). <strong>Il tuo clone</strong> è quello sempre attivo che comanda tutto il tuo ufficio. Consigliamo Claude Code su Opus 4.8 (1M). Gli altri si possono aggiungere o cambiare in seguito.",
+      "cliAgent": "Ogni opzione è un <strong>motore CLI</strong> (Claude Code, Codex, Antigravity/Gemini, oppure un proxy locale come Qwen). I motori contrassegnati INSTALLED sono già su questa macchina; INSTALLS ON FIRST RUN significa che l'app lo configura al primo avvio di {{godName}}. <strong>Il tuo clone</strong> ({{godName}}) è il motore che orchestra tutto l'hive. Consigliato: Claude Code · Opus 4.8 · 1M. Altri provider si possono collegare per singolo agente in seguito.",
+      "recommended": "CONSIGLIATO",
+      "model": "Modello",
+      "modelNote": "Questo imposta solo il motore di {{godName}}. Altri provider si possono usare per singolo agente in seguito."
     },
     "repos": {
-      "descPlain": "Add your projects. A project is simply a folder — it can hold code, documents, notes, or any files you want your agents to work with. You can create a brand-new folder or pick an existing one, and add more anytime.",
-      "desc": "Add the repos you want your agents to work in. Each folder becomes a project (a room on the floor) — multiple agents can share one. You can add more later.",
-      "emptyPlain": "No projects added yet. Optional — you can add one later.",
-      "empty": "No repos added yet. Optional, but recommended.",
-      "addProject": "add a project",
-      "addRepo": "add a repo"
+      "descPlain": "Aggiungi i tuoi progetti. Un progetto è semplicemente una cartella — può contenere codice, documenti, appunti o qualsiasi file su cui far lavorare gli agenti. Si può creare una cartella nuova o sceglierne una esistente, e aggiungerne altre in qualsiasi momento.",
+      "desc": "Aggiungi i repo in cui far lavorare gli agenti. Ogni cartella diventa un progetto (una stanza dell'ufficio) — più agenti possono condividerne una. Se ne possono aggiungere altre in seguito.",
+      "emptyPlain": "Ancora nessun progetto. È facoltativo — se ne può aggiungere uno dopo.",
+      "empty": "Ancora nessun repo. Facoltativo, ma consigliato.",
+      "addProject": "aggiungi un progetto",
+      "addRepo": "aggiungi un repo"
     },
     "permissions": {
-      "autonomyHead": "HOW MUCH CAN AGENTS DO ON THEIR OWN?",
-      "autoLabelPlain": "LET AGENTS WORK ON THEIR OWN",
-      "autoLabel": "WORK AUTONOMOUSLY (AUTO MODE)",
-      "autoOnPlain": "On. Agents carry out tasks without stopping to ask — the smoothest experience.",
-      "autoOffPlain": "Off. Agents pause and ask you before changing files or running commands.",
-      "autoOn": "On. Agents never pause — Claude runs bypassPermissions, Codex bypasses approvals + sandbox, etc.",
-      "autoOff": "Off. Each agent asks before edits / shell commands (Claude default, codex -a untrusted, …).",
-      "autoNotePlain": "Best when agents work in their own projects. You can change this later, including for individual agents.",
-      "autoNote": "The right default for the \"control room\" experience; a foot-gun on production repos. Override per agent in the Add Agent dialog.",
-      "reliabilityHead": "KEEP THINGS RUNNING WHILE YOU'RE AWAY",
-      "reliabilityDescPlain": "Your agents keep working on a schedule and in live terminals, even when you step away. These settings keep you in the loop and keep things running.",
-      "reliabilityDesc": "Your agents keep working on a schedule and in live terminals. If your Mac fully sleeps those timers pause and catch up the moment you're back — nothing is lost, it may just run late.",
-      "keepAwake": "KEEP WORKING WHILE AWAY",
-      "keepAwakeDesc": "Strong keep-alive: stops your Mac from sleeping while an agent is live, so schedules and terminals fire on time even when you step away. Uses more battery — best on power. Off by default.",
-      "notifications": "DESKTOP NOTIFICATIONS",
-      "notificationsDesc": "Get pinged when an agent needs you or a terminal needs reviving — even while you're away. macOS asks permission the first time one fires.",
-      "openAtLogin": "OPEN AT LOGIN",
-      "openAtLoginDesc": "Relaunch the harness after a reboot so scheduled missions resume on their own. No prompt — applies immediately.",
-      "shareStats": "SHARE ANONYMOUS USAGE STATS",
-      "shareStatsDesc": "A handful of anonymous events (app opened, agent spawned, feature used) that help improve Munder Difflin — never prompts, code, file paths, or agent output. Full list in TELEMETRY.md; change anytime in Settings.",
-      "stayAwake": "STAY AWAKE ON POWER (MANUAL)",
-      "stayAwakeDesc": "macOS only lets you set this one yourself. In Battery → Options, turn on \"Prevent automatic sleeping when the display is off\" (on power adapter) so timers keep firing with the display asleep. Without a sleep-preventing setting the Mac still truly sleeps — work survives and catches up on wake.",
-      "openBattery": "open Battery settings",
-      "setItUp": "set it up",
-      "next": "next"
+      "autonomyHead": "QUANTO POSSONO FARE GLI AGENTI DA SOLI?",
+      "autoLabelPlain": "LASCIA LAVORARE GLI AGENTI DA SOLI",
+      "autoLabel": "LAVORO AUTONOMO (MODALITÀ AUTO)",
+      "autoOnPlain": "Attivo. Gli agenti svolgono i task senza fermarsi a chiedere — l'esperienza più fluida.",
+      "autoOffPlain": "Disattivo. Gli agenti si fermano e chiedono prima di modificare file o eseguire comandi.",
+      "autoOn": "Attivo. Gli agenti non si fermano mai — Claude esegue bypassPermissions, Codex salta approvazioni e sandbox, ecc.",
+      "autoOff": "Disattivo. Ogni agente chiede prima di modifiche / comandi shell (default di Claude, codex -a untrusted, …).",
+      "autoNotePlain": "Ideale quando gli agenti lavorano nei propri progetti. Si può cambiare in seguito, anche per singoli agenti.",
+      "autoNote": "Il valore giusto per l'esperienza da \"sala di controllo\"; un'arma puntata ai piedi sui repo di produzione. Si può sovrascrivere per agente nella finestra Aggiungi agente.",
+      "reliabilityHead": "TIENI TUTTO IN MOTO ANCHE IN TUA ASSENZA",
+      "reliabilityDescPlain": "I tuoi agenti continuano a lavorare a orario e nei terminali attivi, anche quando ti allontani. Queste impostazioni tengono aggiornati e mantengono tutto in funzione.",
+      "reliabilityDesc": "I tuoi agenti continuano a lavorare a orario e nei terminali attivi. Se il Mac va in sospensione completa quei timer si fermano e recuperano appena si torna — nulla va perso, può solo essere eseguito in ritardo.",
+      "keepAwake": "CONTINUA A LAVORARE IN TUA ASSENZA",
+      "keepAwakeDesc": "Mantenimento attivo forte: impedisce la sospensione del Mac mentre un agente è vivo, così pianificazioni e terminali scattano in orario anche quando ti allontani. Consuma più batteria — meglio con l'alimentatore. Disattivato per impostazione predefinita.",
+      "notifications": "NOTIFICHE DESKTOP",
+      "notificationsDesc": "Ricevi un avviso quando un agente ha bisogno di te o un terminale va rianimato — anche a distanza. macOS chiede il permesso alla prima notifica.",
+      "openAtLogin": "APRI AL LOGIN",
+      "openAtLoginDesc": "Riavvia l'harness dopo un riavvio del sistema, così le missioni pianificate riprendono da sole. Nessuna richiesta — vale subito.",
+      "shareStats": "CONDIVIDI STATISTICHE D'USO ANONIME",
+      "shareStatsDesc": "Pochi eventi anonimi (app aperta, agente creato, funzione usata) che aiutano a migliorare Munder Difflin — mai prompt, codice, percorsi di file o output degli agenti. Elenco completo in TELEMETRY.md; modificabile in qualsiasi momento nelle Impostazioni.",
+      "stayAwake": "IMPEDISCI LA SOSPENSIONE CON L'ALIMENTATORE (MANUALE)",
+      "stayAwakeDesc": "macOS lascia impostare questa opzione solo manualmente. In Batteria → Opzioni, attiva \"Impedisci la sospensione automatica quando lo schermo è spento\" (con alimentatore) così i timer continuano a scattare a schermo spento. Senza un'impostazione che impedisca la sospensione il Mac si sospende davvero — il lavoro sopravvive e recupera al risveglio.",
+      "openBattery": "apri le impostazioni Batteria",
+      "setItUp": "configura",
+      "next": "avanti"
     },
-    "errPickHome": "Pick a harness home folder first.",
-    "errCreateHome": "could not create harness home",
-    "errEngineNotInstalled": "{{label}} is not installed. Install it and press \"check again\", or pick another engine."
+    "errPickHome": "Scegli prima una cartella home per l'harness.",
+    "errCreateHome": "impossibile creare la home dell'harness",
+    "errEngineNotInstalled": "{{label}} non è installato. Installalo e premi \"controlla di nuovo\", oppure scegli un altro motore."
   },
   "office": {
     "gpuError": "The office floor lost its GPU context.\n\nToo many terminals are using the GPU at once.\nClose a few agent terminals, or restart the app, to bring it back.",
@@ -895,15 +895,15 @@
     "manualDownloadingBody": "When it lands, quit this app, install the new version over the current one, open it and pick the same project. On {{os}}:"
   },
   "triggersTab": {
-    "intro": "Everything that can start work without you typing.",
-    "schedules": "SCHEDULES",
-    "schedulesBlurb": "Run a prompt on a repeating clock.",
-    "context": "CONTEXT",
-    "contextBlurb": "Compact or clear an agent as its context fills.",
-    "webhooks": "WEBHOOKS",
-    "webhooksBlurb": "Let an outside system post work in.",
-    "organisation": "ORGANISATION",
-    "organisationBlurb": "Let a teammate's Munder Difflin message yours."
+    "intro": "Tutto ciò che può avviare il lavoro senza digitare nulla.",
+    "schedules": "PIANIFICAZIONI",
+    "schedulesBlurb": "Esegui un prompt a orario ricorrente.",
+    "context": "CONTESTO",
+    "contextBlurb": "Compatta o svuota un agente man mano che il contesto si riempie.",
+    "webhooks": "WEBHOOK",
+    "webhooksBlurb": "Permetti a un sistema esterno di inviare lavoro.",
+    "organisation": "ORGANIZZAZIONE",
+    "organisationBlurb": "Permetti al Munder Difflin di un collega di inviare messaggi al tuo."
   },
   "orgSection": {
     "acceptMessages": "Accetta messaggi dall'organizzazione",
