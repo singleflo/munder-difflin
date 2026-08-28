@@ -148,7 +148,10 @@ test('no Italian string is left as its English source', () => {
     'triggerHistory.task',                   // "TASK {{id}}"
     // "diff" belongs to the git vocabulary the glossary keeps in English
     // alongside commit, branch and worktree, so this badge is already Italian.
-    'idePanel.diff'                          // "DIFF"
+    'idePanel.diff',                         // "DIFF"
+    // "base: {{branch}}" — base is the same word in Italian, and the label is a
+    // compact badge with no room for a paraphrase.
+    'workersTab.base'
   ]);
   const e = pathsOf(en), i = pathsOf(it);
   const untranslated = [];
