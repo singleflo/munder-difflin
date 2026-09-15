@@ -34,7 +34,7 @@ export interface ImagePreviewProps {
 }
 
 export function ImagePreview({ root, rel, onCopyPath, onViewSource }: ImagePreviewProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('imagePreview');
   const img = useWorkspaceImage(root, rel);
   // Fit is the default because the common case is a full-screen screenshot that
   // is far wider than the pane; showing it at 1:1 first would open every tab
@@ -65,22 +65,22 @@ export function ImagePreview({ root, rel, onCopyPath, onViewSource }: ImagePrevi
             <button
               key={String(v)}
               onClick={() => setFit(v)}
-              title={v ? t('imagePreview.fitTitle') : t('imagePreview.oneToOneTitle')}
+              title={v ? t('fitTitle') : t('oneToOneTitle')}
               style={{
                 ...ideTextBtn,
                 background: fit === v ? 'var(--cth-sky-light)' : 'var(--cth-cream-100)',
                 boxShadow: fit === v ? 'inset 0 0 0 1px var(--cth-ink-500)' : 'inset 0 0 0 1px var(--cth-ink-100)'
               }}
-            >{v ? t('imagePreview.fit') : '1:1'}</button>
+            >{v ? t('fit') : '1:1'}</button>
           ))}
         </span>
 
         {onViewSource && (
-          <button onClick={onViewSource} title={t('imagePreview.viewSourceTitle')} style={ideTextBtn}>
-            {t('imagePreview.viewSource')}
+          <button onClick={onViewSource} title={t('viewSourceTitle')} style={ideTextBtn}>
+            {t('viewSource')}
           </button>
         )}
-        <button onClick={onCopyPath} title="Copy absolute path" style={ideTextBtn}>copy path</button>
+        <button onClick={onCopyPath} title={t('copyAbsPath')} style={ideTextBtn}>{t('copyPath')}</button>
       </div>
 
       <div style={{
@@ -101,11 +101,11 @@ export function ImagePreview({ root, rel, onCopyPath, onViewSource }: ImagePrevi
         backgroundSize: '16px 16px',
         backgroundPosition: '0 0, 0 8px, 8px -8px, -8px 0px'
       }}>
-        {img.status === 'loading' && <Centered>{t('imagePreview.loading')}</Centered>}
+        {img.status === 'loading' && <Centered>{t('loading')}</Centered>}
         {img.status === 'error' && <Centered tone="error">{img.error}</Centered>}
         {img.status === 'ready' && decodeFailed && (
           <Centered tone="error">
-            {t('imagePreview.decodeFailed')}
+            {t('decodeFailed')}
           </Centered>
         )}
         {img.status === 'ready' && !decodeFailed && (

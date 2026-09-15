@@ -129,7 +129,8 @@
     "terminal": "终端",
     "git": "Git",
     "messages": "消息",
-    "traces": "追踪"
+    "traces": "追踪",
+    "dragToResize": "拖动以调整大小 · 双击重置"
   },
   "toolWaterfall": {
     "fresh": "新计 {{tokens}}t",
@@ -1069,7 +1070,16 @@
     "previewTitle": "渲染预览（基于已保存的文件）",
     "openInIde": "在 IDE 中打开",
     "openInIdeTitle": "在完整 IDE 中打开此文件",
-    "closeTitle": "关闭（Esc）"
+    "closeTitle": "关闭（Esc）",
+    "noFileOpen": "没有打开的文件",
+    "pickFile": "从树中选择一个文件在此处查看。",
+    "copyPath": "复制路径",
+    "copyAbsPath": "复制绝对路径",
+    "saveTitle": "保存 (Cmd-S)",
+    "saved": "已保存",
+    "err": "错误",
+    "save": "保存",
+    "loading": "加载中…"
   },
   "gitTab": {
     "notARepo": "不是 git 仓库。",
@@ -1107,7 +1117,10 @@
     "ideTip": "打开 IDE：浏览并编辑 {{name}} 工作区中的文件，并将他们未提交的更改作为差异查看。",
     "openIdeAria": "打开 IDE",
     "openTerminalTip": "在 {{cwd}} 中打开你的系统终端应用 —— 位于该智能体文件夹中的普通 shell，与该智能体自己的终端相互独立。",
-    "openTerminalAria": "在该智能体的文件夹中打开系统终端"
+    "openTerminalAria": "在该智能体的文件夹中打开系统终端",
+    "zoomOut": "缩小 (Cmd -)",
+    "resetZoom": "重置缩放 (Cmd 0)",
+    "zoomIn": "放大 (Cmd +)"
   },
   "memoryPanel": {
     "pill": "🧠 记忆",
@@ -1371,7 +1384,11 @@
     "copyPath": "复制路径",
     "saveTitle": "保存（Cmd/Ctrl+S）",
     "saved": "已保存",
-    "save": "保存"
+    "save": "保存",
+    "noWorkspaceAvailable": "没有可用的工作区。",
+    "spawnFirst": "首先生成一个代理 — IDE 将在其工作目录中打开。",
+    "nothingOpen": "没有打开的内容",
+    "pickFile": "从树中选择一个文件进行编辑，或选择一个更改的文件进行差异比较。"
   },
   "gitPanes": {
     "jumpConfirm": "把仓库跳转到 {{sha}}（\"{{subject}}\"）？\n\n这会脱离 HEAD。若工作区不干净或有智能体正在运行，将自动阻止。",
@@ -1404,6 +1421,8 @@
     "viewSourceTitle": "在编辑器中打开 SVG 标记",
     "viewSource": "查看源码",
     "loading": "正在加载图片…",
-    "decodeFailed": "无法解码此图片——文件可能已损坏或扩展名有误"
+    "decodeFailed": "无法解码此图片——文件可能已损坏或扩展名有误",
+    "copyPath": "复制路径",
+    "copyAbsPath": "复制绝对路径"
   }
 }

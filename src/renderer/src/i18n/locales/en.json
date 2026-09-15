@@ -129,7 +129,8 @@
     "terminal": "terminal",
     "git": "git",
     "messages": "messages",
-    "traces": "traces"
+    "traces": "traces",
+    "dragToResize": "Drag to resize · double-click to reset"
   },
   "toolWaterfall": {
     "fresh": "fresh {{tokens}}t",
@@ -1069,7 +1070,16 @@
     "previewTitle": "Rendered preview (of the saved file)",
     "openInIde": "open in IDE",
     "openInIdeTitle": "Open this file in the full IDE",
-    "closeTitle": "Close (Esc)"
+    "closeTitle": "Close (Esc)",
+    "noFileOpen": "No file open",
+    "pickFile": "Pick a file from the tree to view it here.",
+    "copyPath": "copy path",
+    "copyAbsPath": "Copy absolute path",
+    "saveTitle": "Save (Cmd-S)",
+    "saved": "saved",
+    "err": "err",
+    "save": "save",
+    "loading": "loading…"
   },
   "gitTab": {
     "notARepo": "Not a git repo.",
@@ -1107,7 +1117,10 @@
     "ideTip": "Open the IDE: browse and edit files in {{name}}'s workspace, and see their uncommitted changes as a diff.",
     "openIdeAria": "Open the IDE",
     "openTerminalTip": "Open your system terminal app in {{cwd}} — a normal shell in this agent's folder, separate from the agent's own terminal.",
-    "openTerminalAria": "Open a system terminal in this agent's folder"
+    "openTerminalAria": "Open a system terminal in this agent's folder",
+    "zoomOut": "Zoom out (Cmd -)",
+    "resetZoom": "Reset zoom (Cmd 0)",
+    "zoomIn": "Zoom in (Cmd +)"
   },
   "memoryPanel": {
     "pill": "🧠 memory",
@@ -1371,7 +1384,11 @@
     "copyPath": "copy path",
     "saveTitle": "Save (Cmd/Ctrl+S)",
     "saved": "saved",
-    "save": "save"
+    "save": "save",
+    "noWorkspaceAvailable": "No workspace available.",
+    "spawnFirst": "Spawn an agent first — the IDE opens on its working directory.",
+    "nothingOpen": "nothing open",
+    "pickFile": "Pick a file from the tree to edit, or a changed file to diff."
   },
   "gitPanes": {
     "jumpConfirm": "Jump the repo to {{sha}} (\"{{subject}}\")?\n\nThis detaches HEAD. Blocked automatically if the tree is dirty or an agent is mid-run.",
@@ -1404,6 +1421,8 @@
     "viewSourceTitle": "Open the SVG markup in the editor",
     "viewSource": "view source",
     "loading": "loading image…",
-    "decodeFailed": "could not decode this image — the file may be corrupt or misnamed"
+    "decodeFailed": "could not decode this image — the file may be corrupt or misnamed",
+    "copyPath": "copy path",
+    "copyAbsPath": "Copy absolute path"
   }
 }

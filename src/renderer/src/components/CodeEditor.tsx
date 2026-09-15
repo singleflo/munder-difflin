@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import CodeMirror from '@uiw/react-codemirror';
 import { EditorView } from '@codemirror/view';
 import { HighlightStyle, syntaxHighlighting } from '@codemirror/language';
@@ -84,6 +85,7 @@ export function CodeEditor({
   const [error, setError] = useState<string | undefined>();
   const [absPath, setAbsPath] = useState<string | undefined>();
   const [saveState, setSaveState] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle');
+  const { t } = useTranslation('fileEditor');
 
   // Load file on path change
   useEffect(() => {
@@ -162,13 +164,13 @@ export function CodeEditor({
           textTransform: 'uppercase', letterSpacing: 1,
           color: 'var(--cth-ink-700)'
         }}>
-          No file open
+          {t('noFileOpen')}
         </div>
         <div style={{
           fontFamily: 'var(--cth-font-ui)', fontSize: 13,
           color: 'var(--cth-ink-500)'
         }}>
-          Pick a file from the tree to view it here.
+          {t('pickFile')}
         </div>
       </div>
     );
@@ -196,23 +198,23 @@ export function CodeEditor({
         {onCopyPath && (
           <button
             onClick={onCopyPath}
-            title="Copy absolute path"
+            title={t('copyAbsPath')}
             style={editorBtn}
-          >copy path</button>
+          >{t('copyPath')}</button>
         )}
         <button
           onClick={save}
           disabled={!dirty || saveState === 'saving'}
-          title="Save (Cmd-S)"
+          title={t('saveTitle')}
           style={{ ...editorBtn, opacity: dirty ? 1 : 0.5 }}
         >
-          {saveState === 'saving' ? '...' : saveState === 'saved' ? 'saved' : saveState === 'error' ? 'err' : 'save'}
+          {saveState === 'saving' ? '...' : saveState === 'saved' ? t('saved') : saveState === 'error' ? t('err') : t('save')}
         </button>
         {onOpenInIde && (
           <button
             onClick={onOpenInIde}
-            title="Open in the IDE"
-            aria-label="Open in the IDE"
+            title={t('openInIde')}
+            aria-label={t('openInIde')}
             style={editorBtn}
           >
             <Icon name="code" />
@@ -223,7 +225,7 @@ export function CodeEditor({
       {/* Body */}
       <div style={{ flex: 1, minHeight: 0, overflow: 'hidden' }}>
         {loading ? (
-          <div style={{ padding: 12, color: 'var(--cth-ink-500)' }}>loading…</div>
+          <div style={{ padding: 12, color: 'var(--cth-ink-500)' }}>{t('loading')}</div>
         ) : error ? (
           <div style={{ padding: 12, color: 'var(--cth-coral)' }}>{error}</div>
         ) : (

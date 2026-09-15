@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import type { CSSProperties } from 'react';
+import { useTranslation } from 'react-i18next';
 import '@xterm/xterm/css/xterm.css';
 import { Icon } from './Icon';
 import { acquireTerminal, attachTerminal, detachTerminal, reflowTerminal } from './terminalPool';
@@ -125,6 +126,7 @@ export interface PtyTerminalViewProps {
 }
 
 export function PtyTerminalView({ ptyId, onStreamData, onUserPrompt, onToggleFullscreen, fullscreen, embedded }: PtyTerminalViewProps) {
+  const { t } = useTranslation('fullscreenTerminal');
   const hostRef = useRef<HTMLDivElement | null>(null);
   const onStreamDataRef = useRef(onStreamData);
   onStreamDataRef.current = onStreamData;
@@ -378,37 +380,37 @@ export function PtyTerminalView({ ptyId, onStreamData, onUserPrompt, onToggleFul
           animation: 'cth-pulse 1200ms steps(2, end) infinite'
         }} />
         live · pty {ptyId}
-        <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 2 }}>
-          {/* v0.3.4: the theme + enter-fullscreen buttons moved to the TITLE BAR
-              (top right) — more accessible, and the theme now darkens the whole
-              app. Only the EXIT affordance stays here, in fullscreen. */}
-          <button
-            onClick={() => zoom(-1)}
-            disabled={fontSize <= MIN_FONT_SIZE}
-            title="Zoom out (Cmd -)"
-            style={zoomBtnStyle}
-          >−</button>
-          <button
-            onClick={resetZoom}
-            title="Reset zoom (Cmd 0)"
-            style={{ ...zoomBtnStyle, width: 'auto', padding: '0 4px', minWidth: 28 }}
-          >{fontSize}px</button>
-          <button
-            onClick={() => zoom(1)}
-            disabled={fontSize >= MAX_FONT_SIZE}
-            title="Zoom in (Cmd +)"
-            style={zoomBtnStyle}
-          >+</button>
-          {fullscreen && onToggleFullscreen && (
-            <button
-              onClick={onToggleFullscreen}
-              title="Exit focus mode (Esc)"
-              style={{ ...zoomBtnStyle, width: 22, height: 22, marginLeft: 4 }}
-            >
-              <Icon name="minimize" />
-            </button>
-          )}
-        </div>
+            <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 2 }}>
+              {/* v0.3.4: the theme + enter-fullscreen buttons moved to the TITLE BAR
+                  (top right) — more accessible, and the theme now darkens the whole
+                  app. Only the EXIT affordance stays here, in fullscreen. */}
+              <button
+                onClick={() => zoom(-1)}
+                disabled={fontSize <= MIN_FONT_SIZE}
+                title={t('zoomOut')}
+                style={zoomBtnStyle}
+              >−</button>
+              <button
+                onClick={resetZoom}
+                title={t('resetZoom')}
+                style={{ ...zoomBtnStyle, width: 'auto', padding: '0 4px', minWidth: 28 }}
+              >{fontSize}px</button>
+              <button
+                onClick={() => zoom(1)}
+                disabled={fontSize >= MAX_FONT_SIZE}
+                title={t('zoomIn')}
+                style={zoomBtnStyle}
+              >+</button>
+              {fullscreen && onToggleFullscreen && (
+                <button
+                  onClick={onToggleFullscreen}
+                  title={t('exitFullscreen')}
+                  style={{ ...zoomBtnStyle, width: 22, height: 22, marginLeft: 4 }}
+                >
+                  <Icon name="minimize" />
+                </button>
+              )}
+            </div>
       </div>
       <div ref={hostRef} onDragOver={onDragOver} onDrop={onDrop} style={{
         flex: 1, minHeight: 0,
