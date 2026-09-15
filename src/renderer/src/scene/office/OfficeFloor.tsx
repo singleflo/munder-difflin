@@ -1,9 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import type { TFunction } from 'i18next';
 import { Application, Container, Graphics, Ticker, Texture } from 'pixi.js';
 // PixiJS uses new Function() internally, blocked by Electron CSP — this patches it.
 import 'pixi.js/unsafe-eval';
 import { useStore, type Agent } from '@/store/store';
+import { translateAction } from '@/hooks/usePtyParser';
 import { TiledMapRenderer } from './TiledMapRenderer';
 import { Camera } from './Camera';
 import { Character, paintCup } from './Character';
@@ -145,12 +147,15 @@ function loadTexture(url: string): Promise<Texture> {
 }
 
 /** What the agent is doing right now, for the thought cloud. Prefer the live
- *  `action` (e.g. "edit App.tsx", "bash npm test"), fall back to the prompt we
+ *  `action` (e.g. "edit App.tsx", "waiting on god"), fall back to the prompt we
  *  gave it, then to a caller-supplied generic. Returns '' for the working state
- *  with nothing concrete yet — the bubble renders an animated "…" for that. */
-function liveActivity(agent: Agent, fallback = ''): string {
+ *  with nothing concrete yet — the bubble renders an animated "…" for that.
+ *  Parser status keys (usePtyParser) translate HERE, at render time: the scene
+ *  rebuilds on i18n.language (see the effect deps below), so a language switch
+ *  re-renders the bubble instead of freezing the parse-time wording. */
+function liveActivity(agent: Agent, t: TFunction, fallback = ''): string {
   const action = (agent.action || '').trim();
-  if (action) return action;
+  if (action) return translateAction(action, t);
   return firstWords(agent.lastPrompt) || fallback;
 }
 
@@ -1510,7 +1515,7 @@ export function OfficeFloor() {
           case 'thinking':
             c.setStatusGlyph('none');
             c.sitAtDesk(true);
-            c.showThought(liveActivity(agent), agent.carrying);
+            c.showThought(liveActivity(agent, t), agent.carrying);
             break;
           case 'waiting':
             // Parked at the desk awaiting god / another agent — not actively
@@ -1518,11 +1523,11 @@ export function OfficeFloor() {
             // agents that need the human).
             c.setStatusGlyph('none');
             c.sitAtDesk(false);
-            c.showThought(liveActivity(agent, t('office.activity.waiting')), agent.carrying);
+            c.showThought(liveActivity(agent, t, t('office.activity.waiting')), agent.carrying);
             break;
           case 'blocked':
             c.setStatusGlyph('blocked');
-            c.showThought(liveActivity(agent, t('office.activity.needsYou')));
+            c.showThought(liveActivity(agent, t, t('office.activity.needsYou')));
             c.walkToTile(rt.waitTile);
             break;
           case 'compacting':
@@ -1530,14 +1535,14 @@ export function OfficeFloor() {
             // so an agent compacting context reads as busy rather than frozen.
             c.setStatusGlyph('compacting');
             c.sitAtDesk(true);
-            c.showThought(liveActivity(agent, t('office.activity.compacting')));
+            c.showThought(liveActivity(agent, t, t('office.activity.compacting')));
             break;
           case 'looping':
             // #5C — circuit-breaker armed (#6): hold position with the spinning
             // warning glyph so a runaway agent is visible on the floor.
             c.setStatusGlyph('looping');
             c.sitAtDesk(false);
-            c.showThought(liveActivity(agent, t('office.activity.looping')));
+            c.showThought(liveActivity(agent, t, t('office.activity.looping')));
             break;
           case 'success':
             c.setStatusGlyph('success');
@@ -1559,14 +1564,14 @@ export function OfficeFloor() {
           default:
             c.setStatusGlyph('none');
             // The god runs the floor from its desk; everyone else wanders when idle.
-            if (agent.isGod) { c.sitAtDesk(true); c.showThought(liveActivity(agent, t('office.activity.runningFloor'))); }
+            if (agent.isGod) { c.sitAtDesk(true); c.showThought(liveActivity(agent, t, t('office.activity.runningFloor'))); }
             else if (finishedWork) {
               // Task done → a quick cheer on the spot, then back to roaming.
               c.startWandering();
               c.cheer();
               c.showThought(t(CHEER_KEYS[Math.floor(Math.random() * CHEER_KEYS.length)]));
             }
-            else { c.startWandering(); c.showThought(liveActivity(agent, t('office.activity.idle'))); }
+            else { c.startWandering(); c.showThought(liveActivity(agent, t, t('office.activity.idle'))); }
             break;
         }
       };

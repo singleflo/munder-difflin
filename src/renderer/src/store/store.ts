@@ -27,11 +27,15 @@ export type StationKind =
   | 'shelf' | 'terminal' | 'web' | 'board' | 'mailbox' | 'mcp' | 'desk';
 
 export interface BlockReason {
-  summary: string;                 // short headline shown on banner
-  detail: string;                  // longer explanation
+  /** i18n KEYS, not English copy — the store outlives renders, so parse-time
+   *  English would freeze into state across a language switch. BlockedBanner
+   *  translates these at render; the key values live in usePtyParser (PTY_KEYS)
+   *  and the compiler checks the two against each other. */
+  summary: 'pty.waitingSummary';   // short headline shown on banner
+  detail: 'pty.waitingDetail';     // longer explanation
   command?: string;                // verbatim command awaiting confirmation, if any
   actions: Array<{
-    label: string;
+    label: 'pty.approve' | 'pty.deny';
     kind: 'approve' | 'deny' | 'neutral';
     /** what we'd send to the tmux pane on click */
     send?: string;

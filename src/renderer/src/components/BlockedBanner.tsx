@@ -28,20 +28,22 @@ export function BlockedBanner({ reason, onAction }: BlockedBannerProps) {
       }}>
         <Icon name="bell" /> {t('blockedBanner.needsYou')}
       </div>
+      {/* reason carries i18n KEYS (see usePtyParser) — the store outlives
+          renders, so translation happens HERE, at render time. */}
       <div style={{
         fontFamily: 'var(--cth-font-ui)',
         fontSize: 16,
         lineHeight: '20px',
         color: 'var(--cth-ink-900)'
       }}>
-        {reason.summary}
+        {t(reason.summary)}
       </div>
       <div style={{
         fontSize: 13,
         lineHeight: '18px',
         color: 'var(--cth-ink-700)'
       }}>
-        {reason.detail}
+        {t(reason.detail)}
       </div>
       {reason.command && (
         <div style={{
@@ -67,7 +69,7 @@ export function BlockedBanner({ reason, onAction }: BlockedBannerProps) {
             size="sm"
             onClick={() => onAction(a.label, a.send)}
           >
-            {a.label}
+            {t(a.label)}
           </PixelButton>
         ))}
       </div>

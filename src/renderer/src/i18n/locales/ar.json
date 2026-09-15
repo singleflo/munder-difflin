@@ -32,6 +32,15 @@
   "blockedBanner": {
     "needsYou": "بحاجة إليك"
   },
+  "pty": {
+    "awaiting": "في الانتظار",
+    "waitingOnYou": "بانتظار ردّك",
+    "waitingOnGod": "بانتظار المدير",
+    "waitingSummary": "بانتظار ردّك",
+    "waitingDetail": "الوكيل بانتظار إدخال. تحقّق من الطرفية لرؤية الطلب الفعلي.",
+    "approve": "موافقة",
+    "deny": "رفض"
+  },
   "costHud": {
     "spendCap": "سقف الإنفاق",
     "none": "بلا",

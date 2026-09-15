@@ -32,6 +32,15 @@
   "blockedBanner": {
     "needsYou": "需要你"
   },
+  "pty": {
+    "awaiting": "等待中",
+    "waitingOnYou": "等你回复",
+    "waitingOnGod": "等待老板",
+    "waitingSummary": "等待你的回复",
+    "waitingDetail": "智能体正在等待输入。请查看终端中的确切提示。",
+    "approve": "批准",
+    "deny": "拒绝"
+  },
   "costHud": {
     "spendCap": "支出上限",
     "none": "无",

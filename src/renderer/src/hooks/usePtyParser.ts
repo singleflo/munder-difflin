@@ -1,6 +1,38 @@
 import { useCallback, useEffect, useRef } from 'react';
+import type { TFunction } from 'i18next';
 import { useStore, type ToolKind, type StationKind } from '@/store/store';
 import { createAnsiStripper } from '@/components/ansiText';
+
+/**
+ * i18n KEYS the parser writes into the store in place of English copy.
+ *
+ * The store outlives renders — if t() ran here, at parse time, a later
+ * language switch would leave frozen English in state. So state carries keys
+ * and every RENDER site translates (BlockedBanner, AgentCard's info line, the
+ * OfficeFloor thought bubbles — see translateAction below).
+ */
+export const PTY_KEYS = {
+  awaiting: 'pty.awaiting',
+  waitingOnYou: 'pty.waitingOnYou',
+  waitingOnGod: 'pty.waitingOnGod',
+  waitingSummary: 'pty.waitingSummary',
+  waitingDetail: 'pty.waitingDetail',
+  approve: 'pty.approve',
+  deny: 'pty.deny'
+} as const;
+
+export type PtyKey = typeof PTY_KEYS[keyof typeof PTY_KEYS];
+
+export function isPtyKey(value: string): value is PtyKey {
+  return (Object.values(PTY_KEYS) as readonly string[]).includes(value);
+}
+
+/** Translate a store `action`/`BlockReason` string at render time. Anything
+ *  that is not a parser key is LIVE CONTENT (a tool summary like "edit
+ *  App.tsx", read from the terminal) and passes through untranslated. */
+export function translateAction(action: string, t: TFunction): string {
+  return isPtyKey(action) ? t(action) : action;
+}
 
 // Tool call lines look like: `● Read SPEC.md`, `● Bash npm test`, `● Edit src/foo.ts`
 const TOOL_RE = /●\s+([A-Za-z][A-Za-z_]*)(?:\s+(.+))?/g;
@@ -62,7 +94,7 @@ export function usePtyParser(agentId: string) {
       // No new tool calls for ~4 s → assume the model went idle
       updateAgent(agentId, {
         status: 'idle',
-        action: 'awaiting',
+        action: PTY_KEYS.awaiting,
         carrying: undefined,
         currentStation: 'desk'
       });
@@ -155,21 +187,21 @@ export function usePtyParser(agentId: string) {
       if (isGod) {
         updateAgent(agentId, {
           status: 'blocked',
-          action: 'waiting on you',
+          action: PTY_KEYS.waitingOnYou,
           currentStation: 'mailbox',
           blockReason: {
-            summary: 'Waiting for your reply',
-            detail: 'Claude is waiting for input. Check the terminal for the exact prompt.',
+            summary: PTY_KEYS.waitingSummary,
+            detail: PTY_KEYS.waitingDetail,
             actions: [
-              { label: 'Approve', kind: 'approve', send: 'y\r' },
-              { label: 'Deny',    kind: 'deny',    send: 'n\r' }
+              { label: PTY_KEYS.approve, kind: 'approve', send: 'y\r' },
+              { label: PTY_KEYS.deny,    kind: 'deny',    send: 'n\r' }
             ]
           }
         });
       } else {
         updateAgent(agentId, {
           status: 'waiting',
-          action: 'waiting on god',
+          action: PTY_KEYS.waitingOnGod,
           currentStation: 'desk',
           blockReason: undefined
         });

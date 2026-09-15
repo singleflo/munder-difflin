@@ -32,6 +32,15 @@
   "blockedBanner": {
     "needsYou": "needs you"
   },
+  "pty": {
+    "awaiting": "awaiting",
+    "waitingOnYou": "waiting on you",
+    "waitingOnGod": "waiting on god",
+    "waitingSummary": "Waiting for your reply",
+    "waitingDetail": "The agent is waiting for input. Check the terminal for the exact prompt.",
+    "approve": "Approve",
+    "deny": "Deny"
+  },
   "costHud": {
     "spendCap": "Spend cap",
     "none": "none",
