@@ -51,30 +51,30 @@ const ossLink: CSSProperties = { color: 'var(--cth-ink-900)', textDecoration: 'u
 // role so a user isn't staring at a blank field (item 7). The template BRIEFINGS
 // stay English (they become agent prompts — see the i18n report); only the
 // picker labels are translated.
-const DESCRIPTION_TEMPLATES: { labelKey: string; description: string; goal: string }[] = [
+const DESCRIPTION_TEMPLATES: { labelKey: string; descKey: string; goal: string }[] = [
   {
     labelKey: 'addAgent.templatesHint.repoJanitor.label',
-    description: 'keeps the codebase tidy and healthy',
+    descKey: 'addAgent.templatesHint.repoJanitor.desc',
     goal: 'Continuously hunt for dead code, lint errors, flaky tests, and small safe refactors. Fix the safe ones and leave a note for anything risky. Never change behavior without flagging it.'
   },
   {
     labelKey: 'addAgent.templatesHint.docsWriter.label',
-    description: 'keeps docs in sync with the code',
+    descKey: 'addAgent.templatesHint.docsWriter.desc',
     goal: 'Watch for code changes that outdate the README and docs, then update them. Write for newcomers and prefer concrete examples over prose.'
   },
   {
     labelKey: 'addAgent.templatesHint.bugTriager.label',
-    description: 'investigates and root-causes bugs',
+    descKey: 'addAgent.templatesHint.bugTriager.desc',
     goal: 'For each reported issue: reproduce it, find the root cause, then propose a minimal fix with evidence. No fixes without a confirmed root cause.'
   },
   {
     labelKey: 'addAgent.templatesHint.researchAssistant.label',
-    description: 'gathers and summarizes information',
+    descKey: 'addAgent.templatesHint.researchAssistant.desc',
     goal: 'Research the questions you are given across multiple sources, verify the key claims, and return a concise, cited summary.'
   },
   {
     labelKey: 'addAgent.templatesHint.releaseManager.label',
-    description: 'prepares and ships releases',
+    descKey: 'addAgent.templatesHint.releaseManager.desc',
     goal: 'Track what has shipped since the last release, update the changelog and version, and draft clear release notes.'
   }
 ];
@@ -375,8 +375,7 @@ export function AddAgentModal({ onClose, config, onConfigChange }: AddAgentModal
     const res = await window.cth.importHireFiles();
     if (res.manifests.length > 0) enqueuePendingHires(res.manifests);
     if (res.errors.length > 0) {
-      const noun = res.errors.length === 1 ? 'file' : 'files';
-      setError(`Skipped ${res.errors.length} invalid ${noun}: ${res.errors.join(' · ')}`);
+      setError(tr('addAgent.hireSkipped', { count: res.errors.length, list: res.errors.join(' · ') }));
     } else if (!res.ok && res.error && res.error !== 'cancelled') {
       setError(res.error);
     }
@@ -1037,7 +1036,7 @@ export function AddAgentModal({ onClose, config, onConfigChange }: AddAgentModal
                         {DESCRIPTION_TEMPLATES.map((t) => (
                           <button
                             key={t.labelKey}
-                            onClick={() => { setDescription(t.description); setGoal(t.goal); }}
+                            onClick={() => { setDescription(tr(t.descKey)); setGoal(t.goal); }}
                             title={t.goal}
                             style={{
                               padding: '3px 8px 1px',

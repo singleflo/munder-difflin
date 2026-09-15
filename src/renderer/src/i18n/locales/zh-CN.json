@@ -194,6 +194,7 @@
     "deleteSwitch": "删除 {{count}} 个并切换"
   },
   "settings": {
+    "errChangeHome": "无法更改主文件夹。",
     "title": "设置",
     "changeHomeTitle": "更改主文件夹",
     "resetTitle": "重置一切？",
@@ -250,6 +251,7 @@
       "arabicTerminalFollowsLanguage": "当前跟随应用语言。在此切换即可覆盖，两个方向都可以——你的选择会保留，即使之后再更改语言。"
     },
     "agentsModels": {
+      "whoCanAdd": "谁可以添加智能体",
       "defaultModel": "默认智能体模型",
       "defaultModelDesc": "每个新生成的 Claude 智能体（含 {{godName}}）默认使用此模型，除非按智能体单独选择。在模型选择器中标记为「· 默认」。",
       "savedNote": "已保存——适用于新生成的智能体",
@@ -378,6 +380,10 @@
     "unsavedWarning": "你有未保存的设置。仍要关闭并放弃这些更改吗？"
   },
   "commandCenter": {
+    "errStopProcess": "无法停止当前进程。",
+    "errResumeProvider": "无法通过不同的提供商恢复会话。",
+    "errResumeRefused": "恢复被拒绝；未接受替换会话。",
+    "errFetchIssues": "获取 issues 失败。",
     "title": "命令中心",
     "runsTheFloor": "{{name}} 掌管楼层",
     "deliveryPaused": "已暂停",
@@ -475,6 +481,7 @@
     "openIdeAria": "打开 IDE"
   },
   "addAgent": {
+    "hireSkipped": "跳过了 {{count}} 个无效文件：{{list}}",
     "title": "添加智能体",
     "hireImported": "已导入 hire：",
     "byAuthor": " · 作者 {{author}}",
@@ -540,19 +547,24 @@
     "templates": "模板",
     "templatesHint": {
       "repoJanitor": {
-        "label": "仓库清洁工"
+        "label": "仓库清洁工",
+        "desc": "保持代码库整洁健康"
       },
       "docsWriter": {
-        "label": "文档写手"
+        "label": "文档写手",
+        "desc": "保持文档与代码同步"
       },
       "bugTriager": {
-        "label": "缺陷分诊员"
+        "label": "缺陷分诊员",
+        "desc": "调查并找出 bug 的根本原因"
       },
       "researchAssistant": {
-        "label": "研究助理"
+        "label": "研究助理",
+        "desc": "收集并总结信息"
       },
       "releaseManager": {
-        "label": "发布经理"
+        "label": "发布经理",
+        "desc": "准备并发布版本"
       }
     },
     "description": "描述",
@@ -1092,6 +1104,8 @@
     "copyPath": "复制路径"
   },
   "fullscreenTerminal": {
+    "openSettings": "设置",
+    "noNote": "无笔记",
     "showAgentList": "显示智能体列表",
     "hideAgentList": "隐藏智能体列表——全宽终端",
     "lightTheme": "切换到浅色主题",
@@ -1196,6 +1210,7 @@
     "keptAgo": "{{age}} 前保留"
   },
   "memoryGraph": {
+    "emptyState": "尚未记录消息——蜂巢很安静。智能体显示为名单。",
     "topics": "主题",
     "refresh": "刷新",
     "readingMemory": "正在读取记忆…",
@@ -1213,6 +1228,7 @@
     "legendInformTopic": "告知/主题"
   },
   "integrations": {
+    "placeholder": "例如 {{label}} (prod)",
     "errLabel": "请给它一个名称。",
     "errId": "无法从该名称派生出有效的 ID。",
     "errBaseUrl": "必须填写基础 URL。",

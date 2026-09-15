@@ -194,6 +194,7 @@
     "deleteSwitch": "احذف {{count}} وبدِّل"
   },
   "settings": {
+    "errChangeHome": "تعذّر تغيير مجلد المنزل.",
     "title": "الإعدادات",
     "changeHomeTitle": "تغيير مجلد المنزل",
     "resetTitle": "إعادة تعيين كل شيء؟",
@@ -250,6 +251,7 @@
       "arabicTerminalFollowsLanguage": "يتبع حاليًا لغة التطبيق. بدّله من هنا لتجاوز ذلك في أي من الاتجاهين — ويبقى اختيارك حتى لو غيّرت اللغة مجددًا."
     },
     "agentsModels": {
+      "whoCanAdd": "من يمكنه إضافة وكلاء",
       "defaultModel": "النموذج الافتراضي للوكلاء",
       "defaultModelDesc": "يبدأ كل وكيل Claude يُنشَأ حديثًا ({{godName}} ضمنًا) على هذا النموذج ما لم يُختَر نموذج لكل وكيل. يُعلَّم بـ\"· افتراضي\" في منتقيات النماذج.",
       "savedNote": "حُفِظ — يسري على الوكلاء المنشَئين حديثًا",
@@ -378,6 +380,10 @@
     "unsavedWarning": "لديك إعدادات غير محفوظة. أأغلق على أي حال وأفقدها؟"
   },
   "commandCenter": {
+    "errStopProcess": "تعذّر إيقاف العملية الحالية.",
+    "errResumeProvider": "لا يمكن استئناف جلسة عبر مزوّد مختلف.",
+    "errResumeRefused": "رُفض الاستئناف؛ لم تُقبل أي جلسة بديلة.",
+    "errFetchIssues": "فشل جلب المشكلات.",
     "title": "مركز القيادة",
     "runsTheFloor": "{{name}} يُدير الأرضية",
     "deliveryPaused": "موقوف",
@@ -475,6 +481,7 @@
     "openIdeAria": "افتح بيئة التطوير"
   },
   "addAgent": {
+    "hireSkipped": "تُخطّي {{count}} ملفات غير صالحة: {{list}}",
     "title": "إضافة وكيل",
     "hireImported": "استُورد التعيين:",
     "byAuthor": " · بواسطة {{author}}",
@@ -540,19 +547,24 @@
     "templates": "القوالب",
     "templatesHint": {
       "repoJanitor": {
-        "label": "مُنظِّف المستودع"
+        "label": "مُنظِّف المستودع",
+        "desc": "يحافظ على نظافة وصحة قاعدة الشيفرة"
       },
       "docsWriter": {
-        "label": "كاتب التوثيق"
+        "label": "كاتب التوثيق",
+        "desc": "يبقي التوثيق متزامنًا مع الشيفرة"
       },
       "bugTriager": {
-        "label": "فارز العلل"
+        "label": "فارز العلل",
+        "desc": "يحقّق في العلل ويجد أسبابها الجذرية"
       },
       "researchAssistant": {
-        "label": "مساعد البحث"
+        "label": "مساعد البحث",
+        "desc": "يجمع ويلخّص المعلومات"
       },
       "releaseManager": {
-        "label": "مدير الإصدارات"
+        "label": "مدير الإصدارات",
+        "desc": "يجهّز ويطلق الإصدارات"
       }
     },
     "description": "الوصف",
@@ -1092,6 +1104,8 @@
     "copyPath": "نسخ المسار"
   },
   "fullscreenTerminal": {
+    "openSettings": "الإعدادات",
+    "noNote": "لا ملاحظة",
     "showAgentList": "أظهر قائمة الوكلاء",
     "hideAgentList": "أخفِ قائمة الوكلاء — طرفية بعرض كامل",
     "lightTheme": "التبديل إلى السِمة الفاتحة",
@@ -1196,6 +1210,7 @@
     "keptAgo": "حُفظت منذ {{age}}"
   },
   "memoryGraph": {
+    "emptyState": "لم تُسجَّل أي رسائل بعد — الخلية هادئة. يُعرض الوكلاء كقائمة.",
     "topics": "المواضيع",
     "refresh": "تحديث",
     "readingMemory": "جارٍ قراءة الذاكرة…",
@@ -1213,6 +1228,7 @@
     "legendInformTopic": "إخبار/موضوع"
   },
   "integrations": {
+    "placeholder": "مثال {{label}} (prod)",
     "errLabel": "أعطِه تسمية.",
     "errId": "تعذّر اشتقاق معرّف صالح من التسمية.",
     "errBaseUrl": "عنوان URL الأساسي مطلوب.",

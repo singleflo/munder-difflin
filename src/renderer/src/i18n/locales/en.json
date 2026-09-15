@@ -194,6 +194,7 @@
     "deleteSwitch": "delete {{count}} & switch"
   },
   "settings": {
+    "errChangeHome": "Could not change the home folder.",
     "title": "SETTINGS",
     "changeHomeTitle": "CHANGE HOME FOLDER",
     "resetTitle": "RESET EVERYTHING?",
@@ -250,6 +251,7 @@
       "arabicTerminalFollowsLanguage": "Following your app language. Switch it here to override that either way — the choice sticks even if you change language again."
     },
     "agentsModels": {
+      "whoCanAdd": "Who can add agents",
       "defaultModel": "Default agent model",
       "defaultModelDesc": "Every newly spawned Claude agent ({{godName}} included) starts on this model unless picked per-agent. Marked \"· default\" in the model pickers.",
       "savedNote": "saved — applies to newly spawned agents",
@@ -378,6 +380,10 @@
     "unsavedWarning": "You have unsaved settings. Close anyway and lose them?"
   },
   "commandCenter": {
+    "errStopProcess": "Could not stop the current process.",
+    "errResumeProvider": "Cannot resume a session through a different provider.",
+    "errResumeRefused": "Resume was refused; no replacement session was accepted.",
+    "errFetchIssues": "Failed to fetch issues.",
     "title": "COMMAND CENTER",
     "runsTheFloor": "{{name}} runs the floor",
     "deliveryPaused": "paused",
@@ -475,6 +481,7 @@
     "openIdeAria": "Open the IDE"
   },
   "addAgent": {
+    "hireSkipped": "Skipped {{count}} invalid files: {{list}}",
     "title": "ADD AGENT",
     "hireImported": "hire imported:",
     "byAuthor": " · by {{author}}",
@@ -540,19 +547,24 @@
     "templates": "Templates",
     "templatesHint": {
       "repoJanitor": {
-        "label": "Repo janitor"
+        "label": "Repo janitor",
+        "desc": "keeps the codebase tidy and healthy"
       },
       "docsWriter": {
-        "label": "Docs writer"
+        "label": "Docs writer",
+        "desc": "keeps docs in sync with the code"
       },
       "bugTriager": {
-        "label": "Bug triager"
+        "label": "Bug triager",
+        "desc": "investigates and root-causes bugs"
       },
       "researchAssistant": {
-        "label": "Research assistant"
+        "label": "Research assistant",
+        "desc": "gathers and summarizes information"
       },
       "releaseManager": {
-        "label": "Release manager"
+        "label": "Release manager",
+        "desc": "prepares and ships releases"
       }
     },
     "description": "Description",
@@ -1092,6 +1104,8 @@
     "copyPath": "Copy path"
   },
   "fullscreenTerminal": {
+    "openSettings": "Settings",
+    "noNote": "no note",
     "showAgentList": "Show the agent list",
     "hideAgentList": "Hide the agent list — full-width terminal",
     "lightTheme": "Switch to the light theme",
@@ -1196,6 +1210,7 @@
     "keptAgo": "kept {{age}} ago"
   },
   "memoryGraph": {
+    "emptyState": "No messages logged yet — the hive is quiet. Agents shown as roster.",
     "topics": "topics",
     "refresh": "refresh",
     "readingMemory": "reading memory…",
@@ -1213,6 +1228,7 @@
     "legendInformTopic": "inform/topic"
   },
   "integrations": {
+    "placeholder": "e.g. {{label}} (prod)",
     "errLabel": "Give it a label.",
     "errId": "Could not derive a valid id from the label.",
     "errBaseUrl": "Base URL is required.",

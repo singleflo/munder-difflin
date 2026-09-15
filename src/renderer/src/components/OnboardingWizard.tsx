@@ -773,7 +773,7 @@ export function OnboardingWizard({ onComplete }: OnboardingWizardProps) {
                       // screen, instead of letting a pick that cannot boot through
                       // to a Michael that never starts.
                       if (step === 'orchestrator' && engineBlocked) {
-                        setError(`${providerPreset(godProvider).label} is not installed. Install it and press "check again", or pick another engine.`);
+                        setError(t('onboarding.errEngineNotInstalled', { label: providerPreset(godProvider).label }));
                         return;
                       }
                       setError(undefined);

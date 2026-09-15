@@ -538,9 +538,14 @@ function FloorTab({ seed }: { seed: { text: string; seq: number } }) {
         updateAgent(a.id, patch);
       }
     } catch (error) {
+      let msg = error instanceof Error ? error.message : String(error);
+      if (msg === 'Could not stop the current process.') msg = t('commandCenter.errStopProcess');
+      else if (msg === 'Cannot resume a session through a different provider.') msg = t('commandCenter.errResumeProvider');
+      else if (msg === 'Resume was refused; no replacement session was accepted.') msg = t('commandCenter.errResumeRefused');
+      
       setRestartErrors((errors) => ({
         ...errors,
-        [a.id]: error instanceof Error ? error.message : String(error)
+        [a.id]: msg
       }));
     } finally {
       setRestarting(null);
@@ -583,7 +588,7 @@ function FloorTab({ seed }: { seed: { text: string; seq: number } }) {
         setIssues((res.issues ?? []).slice(0, 10));
       } else {
         setIssues([]);
-        setIssuesError(res.error ?? 'Failed to fetch issues.');
+        setIssuesError(res.error ?? t('commandCenter.errFetchIssues'));
       }
     } catch (e) {
       setIssues([]);

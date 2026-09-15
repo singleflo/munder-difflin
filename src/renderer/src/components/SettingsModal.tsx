@@ -799,7 +799,7 @@ export function SettingsModal({ config, onClose, initialSection }: SettingsModal
     if (changeMode === 'fresh') clearLocalState();
     try {
       const res = await window.cth.changeHome(changeHome, changeMode);
-      if (!res.ok) { setChangeErr(res.error ?? 'Could not change the home folder.'); setChangeBusy(false); }
+      if (!res.ok) { setChangeErr(res.error ?? t('settings.errChangeHome')); setChangeBusy(false); }
       // ok === true never returns (the process relaunches).
     } catch (e) {
       setChangeErr(e instanceof Error ? e.message : String(e));
@@ -1274,7 +1274,7 @@ export function SettingsModal({ config, onClose, initialSection }: SettingsModal
                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
                           <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                             <span style={{ fontSize: 13, lineHeight: '20px', color: 'var(--cth-ink-900)' }}>
-                              Who can add agents
+                              {t('settings.agentsModels.whoCanAdd')}
                             </span>
                             <span style={{ fontSize: 12, lineHeight: '16px', color: 'var(--cth-ink-500)' }}>
                               {orchSpawnOn

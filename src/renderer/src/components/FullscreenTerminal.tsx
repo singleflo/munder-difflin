@@ -359,8 +359,8 @@ export function FullscreenTerminal({ config }: FullscreenTerminalProps) {
           <button
             className="cth-settings-btn"
             onClick={() => window.dispatchEvent(new CustomEvent('cth:open-settings'))}
-            title="Settings"
-            aria-label="Settings"
+            title={t('fullscreenTerminal.openSettings')}
+            aria-label={t('fullscreenTerminal.openSettings')}
             style={{
               display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
               width: 28, height: 28, padding: 0,
@@ -840,7 +840,7 @@ function SidebarRow({
               <span style={{
                 fontSize: scale.note, lineHeight: 1.35,
                 color: 'var(--cth-ink-300)', fontStyle: 'italic'
-              }}>no note</span>
+              }}>{t('fullscreenTerminal.noNote')}</span>
             )}
           </div>
         </div>
