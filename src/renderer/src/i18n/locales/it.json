@@ -18,6 +18,26 @@
     "restarting": "riavvio…",
     "add": "aggiungi"
   },
+  "app": {
+    "autoModeOn": "modalità auto attiva",
+    "autoModeOff": "modalità auto disattiva",
+    "themeLight": "Tema chiaro",
+    "themeDark": "Tema scuro",
+    "toggleDarkMode": "Attiva o disattiva il tema scuro",
+    "settings": "Impostazioni",
+    "focusMode": "Modalità concentrazione",
+    "toggleFocusMode": "Attiva o disattiva la modalità concentrazione",
+    "clockingInTitle": "TIMBRATURA DEL CARTELLINO",
+    "clockingInDesc": "{{godName}} si sta sistemando nella stanza d'angolo e sta preparando l'ufficio. Un attimo di pazienza…",
+    "wakingTitle": "RISVEGLIO DELL'UFFICIO",
+    "wakingLine1": "{{godName}} sta timbrando il cartellino.",
+    "wakingLine2": "Il terminale arriverà qui appena si sarà seduto.",
+    "emptyFloorTitle": "UFFICIO VUOTO",
+    "emptyFloorDesc": "Ancora nessun agente nell'ufficio. Creane uno per vedere l'output reale di claude scorrere qui.",
+    "noAgentTitle": "NESSUN AGENTE SELEZIONATO",
+    "noAgentLine1": "Crea un agente dalla striscia qui sotto.",
+    "noAgentLine2": "Il terminale e la barra dei comandi arriveranno qui."
+  },
   "commandBar": {
     "free": "libero",
     "skill": "/skill",

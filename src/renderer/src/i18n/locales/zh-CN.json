@@ -18,6 +18,26 @@
     "restarting": "重启中…",
     "add": "添加"
   },
+  "app": {
+    "autoModeOn": "自动模式已开启",
+    "autoModeOff": "自动模式已关闭",
+    "themeLight": "浅色主题",
+    "themeDark": "深色主题",
+    "toggleDarkMode": "切换深色模式",
+    "settings": "设置",
+    "focusMode": "专注模式",
+    "toggleFocusMode": "切换专注模式",
+    "clockingInTitle": "正在打卡上班",
+    "clockingInDesc": "{{godName}} 正在角落办公室安顿下来，准备好整个办公区。请稍候……",
+    "wakingTitle": "正在唤醒办公区",
+    "wakingLine1": "{{godName}} 正在打卡上班。",
+    "wakingLine2": "等他坐下，终端就会出现在这里。",
+    "emptyFloorTitle": "办公区空无一人",
+    "emptyFloorDesc": "办公区里还没有智能体。创建一个，就能在这里看到 claude 的真实输出。",
+    "noAgentTitle": "未选择智能体",
+    "noAgentLine1": "从下方的条带中创建一个智能体。",
+    "noAgentLine2": "终端和命令栏会出现在这里。"
+  },
   "commandBar": {
     "free": "自由",
     "skill": "/技能",

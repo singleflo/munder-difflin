@@ -18,6 +18,26 @@
     "restarting": "جارٍ إعادة التشغيل…",
     "add": "إضافة"
   },
+  "app": {
+    "autoModeOn": "الوضع التلقائي مفعَّل",
+    "autoModeOff": "الوضع التلقائي متوقف",
+    "themeLight": "المظهر الفاتح",
+    "themeDark": "المظهر الداكن",
+    "toggleDarkMode": "تبديل المظهر الداكن",
+    "settings": "الإعدادات",
+    "focusMode": "وضع التركيز",
+    "toggleFocusMode": "تبديل وضع التركيز",
+    "clockingInTitle": "تسجيل الحضور",
+    "clockingInDesc": "{{godName}} يستقرّ في مكتب الزاوية ويُجهّز المكتب. انتظر قليلًا…",
+    "wakingTitle": "إيقاظ المكتب",
+    "wakingLine1": "{{godName}} يسجّل حضوره.",
+    "wakingLine2": "ستظهر الطرفية هنا بمجرّد أن يجلس.",
+    "emptyFloorTitle": "المكتب فارغ",
+    "emptyFloorDesc": "لا وكلاء في المكتب بعد. أنشئ واحدًا لترى مخرجات claude الحقيقية تتدفّق هنا.",
+    "noAgentTitle": "لم يُحدَّد أي وكيل",
+    "noAgentLine1": "أنشئ وكيلًا من الشريط بالأسفل.",
+    "noAgentLine2": "ستظهر الطرفية وشريط الأوامر هنا."
+  },
   "commandBar": {
     "free": "حر",
     "skill": "/مهارة",

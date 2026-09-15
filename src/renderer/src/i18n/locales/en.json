@@ -18,6 +18,26 @@
     "restarting": "restarting…",
     "add": "add"
   },
+  "app": {
+    "autoModeOn": "auto mode on",
+    "autoModeOff": "auto mode off",
+    "themeLight": "Light theme",
+    "themeDark": "Dark theme",
+    "toggleDarkMode": "Toggle dark mode",
+    "settings": "Settings",
+    "focusMode": "Focus mode",
+    "toggleFocusMode": "Toggle focus mode",
+    "clockingInTitle": "CLOCKING IN",
+    "clockingInDesc": "{{godName}} is settling into the corner office and getting the floor ready. Hang tight…",
+    "wakingTitle": "WAKING THE FLOOR",
+    "wakingLine1": "{{godName}} is clocking in.",
+    "wakingLine2": "The terminal will land here once he's seated.",
+    "emptyFloorTitle": "EMPTY FLOOR",
+    "emptyFloorDesc": "No agents on the floor yet. Spawn one to see real claude output stream in here.",
+    "noAgentTitle": "NO AGENT SELECTED",
+    "noAgentLine1": "Spawn an agent from the strip below.",
+    "noAgentLine2": "The terminal and command bar will land here."
+  },
   "commandBar": {
     "free": "free",
     "skill": "/skill",
