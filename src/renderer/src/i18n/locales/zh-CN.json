@@ -79,7 +79,14 @@
     "stopAfterStepTip": "让它完成当前步骤后再停止。进程与会话都会保留，因此“重启”和“继续”可以恢复它。若要直接结束进程，请使用 ✕。",
     "stopAfterStepAria": "在当前步骤后停止该智能体",
     "steerTip": "在该智能体的下一轮边界交给它一条笔记。不会打断它当前正在做的事，也不会输入到它的终端。",
-    "steerAria": "给该智能体发送一条笔记"
+    "steerAria": "给该智能体发送一条笔记",
+    "holdEndTip": "结束 1:1。{{godName}} 可以再次将工作交给 {{name}}。",
+    "holdEndAria": "结束 1:1 并将此代理释放给 {{godName}}",
+    "holdStartTip": "将 {{name}} 叫到一边。{{godName}} 停止向他们发送工作，直到您结束它。与这里的两个按钮不同，这不会限制代理：他们继续运行并继续回答您。",
+    "holdStartAria": "将此代理叫到一边进行 1:1",
+    "holdFailed": "1:1 失败",
+    "holdActive": "1:1 中",
+    "holdInactive": "1:1"
   },
   "agentCard": {
     "boss": "老板",
@@ -154,7 +161,10 @@
     "terminalTip": "在 {{cwd}} 中打开你的系统终端应用 —— 位于该智能体文件夹中的普通 shell，与该智能体自己的终端相互独立。",
     "openIde": "打开 IDE",
     "ide": "IDE",
-    "openTerminalAria": "在该智能体的文件夹中打开系统终端"
+    "openTerminalAria": "在该智能体的文件夹中打开系统终端",
+    "nameRequired": "名称是必填项",
+    "renameFailed": "无法重命名代理",
+    "editAgentAria": "编辑此代理"
   },
   "settingsHero": {
     "sponsoredBy": "赞助方",
@@ -1335,7 +1345,9 @@
     "ffCreateKey": "在以下地址免费创建密钥",
     "ffPasteKey": "粘贴到设置 → 语音 → Groq API 密钥",
     "ffClickOrHold": "点击「语音」，或按住右侧 Option 键说话",
-    "ffHoldHint": "单独按住一会儿即可开始；松开后转写到编辑器，发送前可修改。两个 Option 键都可以，Option+按键组合仍会原样到达终端。"
+    "ffHoldHint": "单独按住一会儿即可开始；松开后转写到编辑器，发送前可修改。两个 Option 键都可以，Option+按键组合仍会原样到达终端。",
+    "closePickerTitle": "关闭此代理打开的选择器，以便可以传递排队的消息",
+    "recoverPromptTitle": "将此代理提示符上剩余的文本移至此框中，以便可以传递排队的消息"
   },
   "idePanel": {
     "workspace": "{{name}} 的工作区",
@@ -1405,5 +1417,13 @@
     "viewSource": "查看源码",
     "loading": "正在加载图片…",
     "decodeFailed": "无法解码此图片——文件可能已损坏或扩展名有误"
+  },
+  "editAgent": {
+    "title": "编辑代理",
+    "placeholderDescription": "这个代理是做什么的",
+    "placeholderGoal": "在每次提示时注入的长期指令",
+    "engineNote": "引擎更改将在下次重启时生效。使用指挥中心 → 楼层现在将实时会话重启到新的提供商/模型。",
+    "saveChanges": "保存更改",
+    "cliDefaultModel": "CLI 默认模型"
   }
 }

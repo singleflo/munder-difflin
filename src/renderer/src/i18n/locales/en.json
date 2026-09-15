@@ -79,7 +79,14 @@
     "stopAfterStepTip": "Let it finish the step it is on, then stop. The process and its session survive, so Restart and Continue can pick it back up. To end the process outright, use the X.",
     "stopAfterStepAria": "Stop this agent after the current step",
     "steerTip": "Hands the agent a note at its next turn boundary. It does not interrupt what it is doing now, and nothing is typed into its terminal.",
-    "steerAria": "Send this agent a note"
+    "steerAria": "Send this agent a note",
+    "holdEndTip": "End the 1:1. {{godName}} can hand {{name}} work again.",
+    "holdEndAria": "End the 1:1 and release this agent to {{godName}}",
+    "holdStartTip": "Take {{name}} aside. {{godName}} stops sending them work until you end it. Unlike the two buttons here, this does not restrain the agent: they keep running and keep answering you.",
+    "holdStartAria": "Take this agent aside for a 1:1",
+    "holdFailed": "1:1 failed",
+    "holdActive": "in 1:1",
+    "holdInactive": "1:1"
   },
   "agentCard": {
     "boss": "BOSS",
@@ -154,7 +161,10 @@
     "terminalTip": "Open your system terminal app in {{cwd}} — a normal shell in this agent's folder, separate from the agent's own terminal.",
     "openIde": "Open the IDE",
     "ide": "IDE",
-    "openTerminalAria": "Open a system terminal in this agent's folder"
+    "openTerminalAria": "Open a system terminal in this agent's folder",
+    "nameRequired": "Name is required",
+    "renameFailed": "Could not rename agent",
+    "editAgentAria": "Edit this agent"
   },
   "settingsHero": {
     "sponsoredBy": "Sponsored by",
@@ -1335,7 +1345,9 @@
     "ffCreateKey": "Create a free key at",
     "ffPasteKey": "Paste it into Settings → Voice → Groq API key",
     "ffClickOrHold": "Click voice, or hold the right Option key to talk",
-    "ffHoldHint": "Hold it ALONE for a moment to start; release to transcribe into the composer, where you can edit before sending. Either Option key works, and Option+key combos still reach the terminal untouched."
+    "ffHoldHint": "Hold it ALONE for a moment to start; release to transcribe into the composer, where you can edit before sending. Either Option key works, and Option+key combos still reach the terminal untouched.",
+    "closePickerTitle": "Close the picker this agent has open so queued messages can be delivered",
+    "recoverPromptTitle": "Move the leftover text on this agent's prompt into this box so queued messages can be delivered"
   },
   "idePanel": {
     "workspace": "{{name}}'s workspace",
@@ -1405,5 +1417,13 @@
     "viewSource": "view source",
     "loading": "loading image…",
     "decodeFailed": "could not decode this image — the file may be corrupt or misnamed"
+  },
+  "editAgent": {
+    "title": "EDIT AGENT",
+    "placeholderDescription": "what is this agent for",
+    "placeholderGoal": "long-running directive injected on every prompt",
+    "engineNote": "Engine changes are saved for the next restart. Use Command Center → Floor to restart a live session onto a new provider/model now.",
+    "saveChanges": "save changes",
+    "cliDefaultModel": "CLI default model"
   }
 }

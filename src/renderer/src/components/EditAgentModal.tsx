@@ -1,4 +1,5 @@
 import { useEffect, useState, type CSSProperties } from 'react';
+import { useTranslation } from 'react-i18next';
 import { PixelPanel } from './PixelPanel';
 import { PixelButton } from './PixelButton';
 import { SpritePortrait } from './SpritePortrait';
@@ -30,6 +31,7 @@ export interface EditAgentModalProps {
  * via updateAgent (engine changes apply on the next restart).
  */
 export function EditAgentModal({ agent, onClose }: EditAgentModalProps) {
+  const { t } = useTranslation();
   const updateAgent = useStore((s) => s.updateAgent);
   const [config, setConfig] = useState<HarnessConfig | null>(null);
 
@@ -105,7 +107,7 @@ export function EditAgentModal({ agent, onClose }: EditAgentModalProps) {
           one job — describe an agent — and a tall narrow dialog next to a wide
           one reads as two unrelated screens. */}
       <div onClick={(e) => e.stopPropagation()} style={{ width: 940, maxWidth: '95vw' }}>
-        <PixelPanel variant="dialog" title="EDIT AGENT" style={{ padding: 16 }} noPadding>
+        <PixelPanel variant="dialog" title={t('editAgent.title')} style={{ padding: 16 }} noPadding>
           <div style={{
             display: 'flex', flexDirection: 'column', gap: 14,
             padding: 16, maxHeight: '86vh', overflowY: 'auto'
@@ -231,7 +233,7 @@ export function EditAgentModal({ agent, onClose }: EditAgentModalProps) {
                           key={m.label}
                           type="button"
                           onClick={() => setModel(m.id)}
-                          title={m.id ?? 'CLI default model'}
+                          title={m.id ?? t('editAgent.cliDefaultModel')}
                           style={{
                             padding: '3px 8px 1px',
                             background: active ? `var(--cth-${accent}-light)` : 'var(--cth-cream-100)',
@@ -251,7 +253,7 @@ export function EditAgentModal({ agent, onClose }: EditAgentModalProps) {
               )}
 
               <span style={{ fontSize: 12, color: 'var(--cth-ink-500)', lineHeight: '16px' }}>
-                Engine changes are saved for the next restart. Use Command Center → Floor to restart a live session onto a new provider/model now.
+                {t('editAgent.engineNote')}
               </span>
             </Section>
 
@@ -262,7 +264,7 @@ export function EditAgentModal({ agent, onClose }: EditAgentModalProps) {
                 <input
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
-                  placeholder="what is this agent for"
+                  placeholder={t('editAgent.placeholderDescription')}
                   style={inputStyle}
                 />
               </Row>
@@ -271,7 +273,7 @@ export function EditAgentModal({ agent, onClose }: EditAgentModalProps) {
                 <textarea
                   value={goal}
                   onChange={(e) => setGoal(e.target.value)}
-                  placeholder="long-running directive injected on every prompt"
+                  placeholder={t('editAgent.placeholderGoal')}
                   rows={4}
                   style={{ ...inputStyle, fontFamily: 'var(--cth-font-ui)', resize: 'vertical', minHeight: 200 }}
                 />
@@ -283,7 +285,7 @@ export function EditAgentModal({ agent, onClose }: EditAgentModalProps) {
             <div style={{ display: 'flex', gap: 8, justifyContent: 'flex-end', marginTop: 4 }}>
               <PixelButton variant="ghost" size="md" onClick={onClose}>cancel</PixelButton>
               <div style={{ flex: 1 }} />
-              <PixelButton variant="primary" size="md" onClick={save}>save changes</PixelButton>
+              <PixelButton variant="primary" size="md" onClick={save}>{t('editAgent.saveChanges')}</PixelButton>
             </div>
           </div>
         </PixelPanel>
